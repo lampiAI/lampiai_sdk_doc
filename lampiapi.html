@@ -18,7 +18,8 @@
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="lampiapi" href="modules.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,44 +41,30 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">lampiapi package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-lampiapi.lampiapi">lampiapi.lampiapi module</a><ul>
-<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a><ul>
-<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI.logger"><code class="docutils literal notranslate"><span class="pre">LampiAPI.logger</span></code></a></li>
-<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI.create_meeting"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_meeting()</span></code></a></li>
-<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI.trigger_task"><code class="docutils literal notranslate"><span class="pre">LampiAPI.trigger_task()</span></code></a></li>
-<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI.update_status_by_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.update_status_by_id()</span></code></a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">lampiapi</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">lampiapi package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.lampiapi">lampiapi.lampiapi module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.mylogger">lampiapi.mylogger module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.mylogger.MyLogger"><code class="docutils literal notranslate"><span class="pre">MyLogger</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.s3">lampiapi.s3 module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.s3.S3"><code class="docutils literal notranslate"><span class="pre">S3</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-lampiapi">Module contents</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-lampiapi.mylogger">lampiapi.mylogger module</a><ul>
-<li><a class="reference internal" href="#lampiapi.mylogger.MyLogger"><code class="docutils literal notranslate"><span class="pre">MyLogger</span></code></a><ul>
-<li><a class="reference internal" href="#lampiapi.mylogger.MyLogger.get_logger"><code class="docutils literal notranslate"><span class="pre">MyLogger.get_logger()</span></code></a></li>
 </ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-lampiapi.s3">lampiapi.s3 module</a><ul>
-<li><a class="reference internal" href="#lampiapi.s3.S3"><code class="docutils literal notranslate"><span class="pre">S3</span></code></a><ul>
-<li><a class="reference internal" href="#lampiapi.s3.S3.logger"><code class="docutils literal notranslate"><span class="pre">S3.logger</span></code></a></li>
-<li><a class="reference internal" href="#lampiapi.s3.S3.create_presigned_post"><code class="docutils literal notranslate"><span class="pre">S3.create_presigned_post()</span></code></a></li>
-<li><a class="reference internal" href="#lampiapi.s3.S3.create_presigned_url"><code class="docutils literal notranslate"><span class="pre">S3.create_presigned_url()</span></code></a></li>
-<li><a class="reference internal" href="#lampiapi.s3.S3.delete_files"><code class="docutils literal notranslate"><span class="pre">S3.delete_files()</span></code></a></li>
-<li><a class="reference internal" href="#lampiapi.s3.S3.get_file"><code class="docutils literal notranslate"><span class="pre">S3.get_file()</span></code></a></li>
-<li><a class="reference internal" href="#lampiapi.s3.S3.list_files"><code class="docutils literal notranslate"><span class="pre">S3.list_files()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-lampiapi">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -92,6 +79,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">lampiapi</a></li>
       <li class="breadcrumb-item active">lampiapi package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/lampiapi.rst.txt" rel="nofollow"> View page source</a>
@@ -113,19 +101,28 @@
 <dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.lampiapi.</span></span><span class="sig-name descname"><span class="pre">LampiAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A class for interacting with the Lampi API.</p>
-<p>ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.logger">
-<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.logger" title="Link to this definition"></a></dt>
-<dd><p>The logger instance for logging.</p>
+<p>A class for interacting with the Lampi API.
+ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Logger</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>logger</strong> (<em>Logger</em>) – The logger instance for logging.</p>
 </dd>
 </dl>
-</dd></dl>
-
+<dl>
+<dt>Environment Variables:</dt><dd><p>ADMINAUTH (str): The lampi API authentication secret.</p>
+<p>BACK_URL (str): The lampi API url.</p>
+</dd>
+<dt>Example usage:</dt><dd><p># Initialize the LampiAPI instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+</pre></div>
+</div>
+<p># Initialize with a custom logger:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">custom_logger</span> <span class="o">=</span> <span class="n">MyLogger</span><span class="p">(</span><span class="s2">&quot;custom.log&quot;</span><span class="p">,</span> <span class="s2">&quot;custom_logger&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">(</span><span class="n">custom_logger</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.create_meeting">
 <span class="sig-name descname"><span class="pre">create_meeting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">organization_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.create_meeting" title="Link to this definition"></a></dt>
@@ -146,6 +143,20 @@
 <dd class="field-odd"><p>dict or None</p>
 </dd>
 </dl>
+<p class="rubric">Example</p>
+<p># Create a meeting via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">organization_id</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;example_meeting.txt&quot;</span>
+<span class="n">size</span> <span class="o">=</span> <span class="mi">1024</span>  <span class="c1"># Size in bytes</span>
+<span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;scheduled&quot;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">meeting_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_meeting</span><span class="p">(</span><span class="n">organization_id</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">meeting_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Meeting </span><span class="si">%s</span><span class="s2"> created successfully&quot;</span> <span class="o">%</span> <span class="n">meeting_result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Meeting creation failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -163,6 +174,16 @@
 <dd class="field-odd"><p>dict or None</p>
 </dd>
 </dl>
+<p class="rubric">Example</p>
+<p># Create a summary task:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">task_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="p">(</span><span class="s2">&quot;create_global_summary_as_admin&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">task_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating summary tasks triggered successfully&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating summary tasks failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -183,6 +204,18 @@
 <dd class="field-odd"><p>dict or None</p>
 </dd>
 </dl>
+<p class="rubric">Example</p>
+<p># Update the status of a document by ID:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document_id</span> <span class="o">=</span> <span class="mi">456</span>
+<span class="n">new_status</span> <span class="o">=</span> <span class="s2">&quot;processed&quot;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">update_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">update_status_by_id</span><span class="p">(</span><span class="n">document_id</span><span class="p">,</span> <span class="n">new_status</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">update_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document </span><span class="si">%s</span><span class="s2"> status updated successfully!&quot;</span> <span class="o">%</span> <span class="n">update_result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Status update failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -230,23 +263,36 @@ If not provided, a default logger will be created.</p>
 </dd>
 </dl>
 <dl>
-<dt>Envorinment Variables:</dt><dd><p>AWS_S3 (str): The value of the AWS_S3 environment variable (True for Amazon S3 False for a compatible S3).
-AWS_PUBLIC (str): The value of the AWS_PUBLIC environment variable.
-AWS_SECRET (str): The value of the AWS_SECRET environment variable.
-DIRECTORY_PATH (str): The value of the DIRECTORY_PATH environment variable.</p>
+<dt>Environment Variables:</dt><dd><p>AWS_S3 (str): The value of the AWS_S3 environment variable (True for Amazon S3 False for a compatible S3).</p>
+<p>AWS_PUBLIC (str): The value of the AWS_PUBLIC environment variable.</p>
+<p>AWS_SECRET (str): The value of the AWS_SECRET environment variable.</p>
+<p>DIRECTORY_PATH (str): The value of the DIRECTORY_PATH environment variable.</p>
 </dd>
-<dt>Example usage:</dt><dd><p># Initialize the S3 client
-s3_client = S3()</p>
-<p># Create a presigned URL for uploading a file to S3
-upload_url = s3_client.create_presigned_post(“my-bucket”, “my-object”)</p>
-<p># Create a presigned URL for downloading a file from S3
-download_url = s3_client.create_presigned_url(“my-bucket”, “my-object”, organization_id, department_id, “pdf”, 123)</p>
-<p># Get a file from S3 and save it locally
-s3_client.get_file(“my-bucket”, “my-object”)</p>
-<p># Delete a file from S3
-deleted = s3_client.delete_files(“my-bucket”, “my-object”)</p>
-<p># List files in an S3 bucket
-file_count = s3_client.list_files(“my-bucket”)</p>
+<dt>Example usage:</dt><dd><p># Initialize the S3 client:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lampiapi</span> <span class="kn">import</span> <span class="n">S3</span>
+<span class="n">s3_client</span> <span class="o">=</span> <span class="n">S3</span><span class="p">()</span>
+</pre></div>
+</div>
+<p># Create a presigned URL for uploading a file to S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">upload_url</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">create_presigned_post</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span> <span class="s2">&quot;my-object&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># Create a presigned URL for downloading a file from S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">download_url</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">create_presigned_url</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span> <span class="s2">&quot;my-object&quot;</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">department_id</span><span class="p">,</span> <span class="s2">&quot;pdf&quot;</span><span class="p">,</span> <span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># Get a file from S3 and save it locally:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s3_client</span><span class="o">.</span><span class="n">get_file</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span> <span class="s2">&quot;my-object&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># Delete a file from S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deleted</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">delete_files</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span> <span class="s2">&quot;my-object&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># List files in an S3 bucket:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file_count</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">list_files</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd>
 </dl>
 <dl class="py method">
@@ -280,15 +326,15 @@ Default is 60 seconds.</p></li>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<p># Generate a presigned POST URL for uploading a file to S3
-upload_url = s3_client.create_presigned_post(</p>
-<blockquote>
-<div><p>bucket_name=”my-bucket”,
-object_name=”my-object”,
-fields={“acl”: “public-read”},
-expiration=3600,</p>
-</div></blockquote>
-<p>)</p>
+<p># Generate a presigned POST URL for uploading a file to S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">upload_url</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">create_presigned_post</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;my-object&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;acl&quot;</span><span class="p">:</span> <span class="s2">&quot;public-read&quot;</span><span class="p">},</span>
+    <span class="n">expiration</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -316,18 +362,18 @@ Default is 3600 seconds (1 hour).</p></li>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<p># Generate a presigned URL for downloading a PDF document from S3
-download_url = s3_client.create_presigned_url(</p>
-<blockquote>
-<div><p>bucket_name=”my-bucket”,
-object_name=”example.pdf”,
-organization_id=123,
-department_id=456,
-file_type=”pdf”,
-document_id=789,
-expiration=3600,</p>
-</div></blockquote>
-<p>)</p>
+<p># Generate a presigned URL for downloading a PDF document from S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">download_url</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">create_presigned_url</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+    <span class="n">organization_id</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">department_id</span><span class="o">=</span><span class="mi">456</span><span class="p">,</span>
+    <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;pdf&quot;</span><span class="p">,</span>
+    <span class="n">document_id</span><span class="o">=</span><span class="mi">789</span><span class="p">,</span>
+    <span class="n">expiration</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -349,13 +395,13 @@ expiration=3600,</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<p># Delete a file from S3
-deleted = s3_client.delete_files(</p>
-<blockquote>
-<div><p>bucket_name=”my-bucket”,
-object_name=”example.pdf”,</p>
-</div></blockquote>
-<p>)</p>
+<p># Delete a file from S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deleted</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">delete_files</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -374,13 +420,13 @@ object_name=”example.pdf”,</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<p># Download a file from S3 and save it locally
-s3_client.get_file(</p>
-<blockquote>
-<div><p>bucket_name=”my-bucket”,
-object_name=”example.pdf”,</p>
-</div></blockquote>
-<p>)</p>
+<p># Download a file from S3 and save it locally:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s3_client</span><span class="o">.</span><span class="n">get_file</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -403,12 +449,12 @@ object_name=”example.pdf”,</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<p># List files in an S3 bucket
-file_count = s3_client.list_files(</p>
-<blockquote>
-<div><p>bucket_name=”my-bucket”,</p>
-</div></blockquote>
-<p>)</p>
+<p># List files in an S3 bucket:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file_count</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">list_files</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -422,7 +468,9 @@ file_count = s3_client.list_files(</p>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="lampiapi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
