@@ -10,7 +10,7 @@ Welcome to Lampi API's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   ./lampiapi.rst
+   ./modules.rst
 
 
 Indices and tables
