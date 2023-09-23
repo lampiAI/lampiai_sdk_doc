@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lampiapi package &mdash; Lampi API Lampi API documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=540c8e58"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Lampi API
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">lampiapi package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-lampiapi.lampiapi">lampiapi.lampiapi module</a><ul>
+<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a><ul>
+<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI.logger"><code class="docutils literal notranslate"><span class="pre">LampiAPI.logger</span></code></a></li>
+<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI.create_meeting"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_meeting()</span></code></a></li>
+<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI.trigger_task"><code class="docutils literal notranslate"><span class="pre">LampiAPI.trigger_task()</span></code></a></li>
+<li><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI.update_status_by_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.update_status_by_id()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-lampiapi.mylogger">lampiapi.mylogger module</a><ul>
+<li><a class="reference internal" href="#lampiapi.mylogger.MyLogger"><code class="docutils literal notranslate"><span class="pre">MyLogger</span></code></a><ul>
+<li><a class="reference internal" href="#lampiapi.mylogger.MyLogger.get_logger"><code class="docutils literal notranslate"><span class="pre">MyLogger.get_logger()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-lampiapi.s3">lampiapi.s3 module</a><ul>
+<li><a class="reference internal" href="#lampiapi.s3.S3"><code class="docutils literal notranslate"><span class="pre">S3</span></code></a><ul>
+<li><a class="reference internal" href="#lampiapi.s3.S3.logger"><code class="docutils literal notranslate"><span class="pre">S3.logger</span></code></a></li>
+<li><a class="reference internal" href="#lampiapi.s3.S3.create_presigned_post"><code class="docutils literal notranslate"><span class="pre">S3.create_presigned_post()</span></code></a></li>
+<li><a class="reference internal" href="#lampiapi.s3.S3.create_presigned_url"><code class="docutils literal notranslate"><span class="pre">S3.create_presigned_url()</span></code></a></li>
+<li><a class="reference internal" href="#lampiapi.s3.S3.delete_files"><code class="docutils literal notranslate"><span class="pre">S3.delete_files()</span></code></a></li>
+<li><a class="reference internal" href="#lampiapi.s3.S3.get_file"><code class="docutils literal notranslate"><span class="pre">S3.get_file()</span></code></a></li>
+<li><a class="reference internal" href="#lampiapi.s3.S3.list_files"><code class="docutils literal notranslate"><span class="pre">S3.list_files()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-lampiapi">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Lampi API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">lampiapi package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/lampiapi.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lampiapi-package">
+<h1>lampiapi package<a class="headerlink" href="#lampiapi-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-lampiapi.lampiapi">
+<span id="lampiapi-lampiapi-module"></span><h2>lampiapi.lampiapi module<a class="headerlink" href="#module-lampiapi.lampiapi" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.lampiapi.</span></span><span class="sig-name descname"><span class="pre">LampiAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for interacting with the Lampi API.</p>
+<p>ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.logger" title="Link to this definition"></a></dt>
+<dd><p>The logger instance for logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.create_meeting">
+<span class="sig-name descname"><span class="pre">create_meeting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">organization_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.create_meeting" title="Link to this definition"></a></dt>
+<dd><p>Create a meeting via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>organization_id</strong> (<em>int</em>) – The ID of the organization.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – The name of the meeting file.</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – The size of the meeting file.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the meeting.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.trigger_task">
+<span class="sig-name descname"><span class="pre">trigger_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.trigger_task" title="Link to this definition"></a></dt>
+<dd><p>Trigger a task via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task</strong> (<em>str</em>) – The task to trigger.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.update_status_by_id">
+<span class="sig-name descname"><span class="pre">update_status_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.update_status_by_id" title="Link to this definition"></a></dt>
+<dd><p>Update the status of a document by ID via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>document_id</strong> (<em>int</em>) – The ID of the document.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The new status for the document.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-lampiapi.mylogger">
+<span id="lampiapi-mylogger-module"></span><h2>lampiapi.mylogger module<a class="headerlink" href="#module-lampiapi.mylogger" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.mylogger.MyLogger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.mylogger.</span></span><span class="sig-name descname"><span class="pre">MyLogger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">script_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.mylogger.MyLogger" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.mylogger.MyLogger.get_logger">
+<span class="sig-name descname"><span class="pre">get_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.mylogger.MyLogger.get_logger" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-lampiapi.s3">
+<span id="lampiapi-s3-module"></span><h2>lampiapi.s3 module<a class="headerlink" href="#module-lampiapi.s3" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.s3.S3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.s3.</span></span><span class="sig-name descname"><span class="pre">S3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.s3.S3" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for interacting with Amazon S3 storage or any S3 compatible storage.</p>
+<p>This class provides methods to perform various operations on S3, such as
+creating presigned URLs for file uploads and downloads, getting files from S3,
+deleting files, and listing files in a specified S3 bucket.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.s3.S3.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#lampiapi.s3.S3.logger" title="Link to this definition"></a></dt>
+<dd><p>The logger object used for logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>logger</strong> (<em>Logger</em><em>, </em><em>optional</em>) – An optional logger object to use for logging.
+If not provided, a default logger will be created.</p>
+</dd>
+</dl>
+<dl>
+<dt>Envorinment Variables:</dt><dd><p>AWS_S3 (str): The value of the AWS_S3 environment variable (True for Amazon S3 False for a compatible S3).
+AWS_PUBLIC (str): The value of the AWS_PUBLIC environment variable.
+AWS_SECRET (str): The value of the AWS_SECRET environment variable.
+DIRECTORY_PATH (str): The value of the DIRECTORY_PATH environment variable.</p>
+</dd>
+<dt>Example usage:</dt><dd><p># Initialize the S3 client
+s3_client = S3()</p>
+<p># Create a presigned URL for uploading a file to S3
+upload_url = s3_client.create_presigned_post(“my-bucket”, “my-object”)</p>
+<p># Create a presigned URL for downloading a file from S3
+download_url = s3_client.create_presigned_url(“my-bucket”, “my-object”, organization_id, department_id, “pdf”, 123)</p>
+<p># Get a file from S3 and save it locally
+s3_client.get_file(“my-bucket”, “my-object”)</p>
+<p># Delete a file from S3
+deleted = s3_client.delete_files(“my-bucket”, “my-object”)</p>
+<p># List files in an S3 bucket
+file_count = s3_client.list_files(“my-bucket”)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.s3.S3.create_presigned_post">
+<span class="sig-name descname"><span class="pre">create_presigned_post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expiration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.s3.S3.create_presigned_post" title="Link to this definition"></a></dt>
+<dd><p>Generate a presigned POST URL for uploading a file to an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be uploaded to the bucket.</p></li>
+<li><p><strong>fields</strong> (<em>dict</em><em>, </em><em>optional</em>) – A dictionary of additional form fields to include in the
+presigned URL. These fields can be used to specify conditions for the upload.
+Default is None.</p></li>
+<li><p><strong>conditions</strong> (<em>list</em><em>, </em><em>optional</em>) – A list of conditions to apply to the presigned URL.
+Each condition is a dictionary with ‘acl’, ‘bucket’, ‘content-length-range’,
+or other S3 conditions as keys. Default is None.</p></li>
+<li><p><strong>expiration</strong> (<em>int</em><em>, </em><em>optional</em>) – The expiration time for the presigned URL in seconds.
+Default is 60 seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>The generated presigned POST URL for uploading the file to S3.</dt><dd><p>Returns None if there was an error generating the URL.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Generate a presigned POST URL for uploading a file to S3
+upload_url = s3_client.create_presigned_post(</p>
+<blockquote>
+<div><p>bucket_name=”my-bucket”,
+object_name=”my-object”,
+fields={“acl”: “public-read”},
+expiration=3600,</p>
+</div></blockquote>
+<p>)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.s3.S3.create_presigned_url">
+<span class="sig-name descname"><span class="pre">create_presigned_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">department_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expiration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3600</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.s3.S3.create_presigned_url" title="Link to this definition"></a></dt>
+<dd><p>Generate a presigned URL for downloading a file from an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be downloaded from the bucket.</p></li>
+<li><p><strong>organization_id</strong> (<em>int</em>) – The ID of the organization associated with the file.</p></li>
+<li><p><strong>department_id</strong> (<em>int</em>) – The ID of the department associated with the file.</p></li>
+<li><p><strong>file_type</strong> (<em>str</em>) – The type of the file (e.g., ‘pdf’, ‘jpg’).</p></li>
+<li><p><strong>document_id</strong> (<em>int</em>) – The unique ID of the document.</p></li>
+<li><p><strong>expiration</strong> (<em>int</em><em>, </em><em>optional</em>) – The expiration time for the presigned URL in seconds.
+Default is 3600 seconds (1 hour).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The generated presigned URL for downloading the file from S3.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Generate a presigned URL for downloading a PDF document from S3
+download_url = s3_client.create_presigned_url(</p>
+<blockquote>
+<div><p>bucket_name=”my-bucket”,
+object_name=”example.pdf”,
+organization_id=123,
+department_id=456,
+file_type=”pdf”,
+document_id=789,
+expiration=3600,</p>
+</div></blockquote>
+<p>)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.s3.S3.delete_files">
+<span class="sig-name descname"><span class="pre">delete_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.s3.S3.delete_files" title="Link to this definition"></a></dt>
+<dd><p>Delete a file from an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be deleted from the bucket.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the file was successfully deleted, False if there was an error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Delete a file from S3
+deleted = s3_client.delete_files(</p>
+<blockquote>
+<div><p>bucket_name=”my-bucket”,
+object_name=”example.pdf”,</p>
+</div></blockquote>
+<p>)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.s3.S3.get_file">
+<span class="sig-name descname"><span class="pre">get_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.s3.S3.get_file" title="Link to this definition"></a></dt>
+<dd><p>Download a file from an Amazon S3 bucket and save it locally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be downloaded from the bucket.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Download a file from S3 and save it locally
+s3_client.get_file(</p>
+<blockquote>
+<div><p>bucket_name=”my-bucket”,
+object_name=”example.pdf”,</p>
+</div></blockquote>
+<p>)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.s3.S3.list_files">
+<span class="sig-name descname"><span class="pre">list_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lampiapi.s3.S3.list_files" title="Link to this definition"></a></dt>
+<dd><p>List the files in an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>The number of files in the bucket. Returns 0 if there are no files or</dt><dd><p>if there was an error listing the files.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># List files in an S3 bucket
+file_count = s3_client.list_files(</p>
+<blockquote>
+<div><p>bucket_name=”my-bucket”,</p>
+</div></blockquote>
+<p>)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-lampiapi">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lampiapi" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Lampi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

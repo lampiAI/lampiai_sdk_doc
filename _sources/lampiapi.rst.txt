@@ -1,0 +1,37 @@
+lampiapi package
+================
+
+Submodules
+----------
+
+lampiapi.lampiapi module
+------------------------
+
+.. automodule:: lampiapi.lampiapi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+lampiapi.mylogger module
+------------------------
+
+.. automodule:: lampiapi.mylogger
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+lampiapi.s3 module
+------------------
+
+.. automodule:: lampiapi.s3
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: lampiapi
+   :members:
+   :undoc-members:
+   :show-inheritance:
