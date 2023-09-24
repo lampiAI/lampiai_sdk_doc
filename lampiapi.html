@@ -103,9 +103,21 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class for interacting with the Lampi API.
 ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.logger" title="Link to this definition"></a></dt>
+<dd><p>The logger object used for logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>logger</strong> (<em>Logger</em>) – The logger instance for logging.</p>
+<dd class="field-odd"><p><strong>logger</strong> (<em>Logger</em><em>, </em><em>optional</em>) – An optional logger object to use for logging.
+If not provided, a default logger will be created.</p>
 </dd>
 </dl>
 <dl>
@@ -123,6 +135,42 @@ ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
 </div>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.create_chat_meeting">
+<span class="sig-name descname"><span class="pre">create_chat_meeting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">department_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.create_chat_meeting" title="Link to this definition"></a></dt>
+<dd><p>Create a chat to manage a meeting via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>document_id</strong> (<em>int</em>) – The ID of the meeting document ID.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the chat.</p></li>
+<li><p><strong>department_id</strong> (<em>int</em>) – The department_id to create the chat for.</p></li>
+<li><p><strong>email</strong> (<em>str</em>) – The email of the user who created the meeting.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Create a chat via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document_id</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;A meeting with Google&quot;</span>
+<span class="n">department_id</span> <span class="o">=</span> <span class="mi">456</span>
+<span class="n">email</span> <span class="o">=</span> <span class="s2">&quot;test@gmail.com&quot;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">chat_created_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_chat_meeting</span><span class="p">(</span><span class="n">document_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">department_id</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">chat_created_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Chat </span><span class="si">%s</span><span class="s2"> created successfully&quot;</span> <span class="o">%</span> <span class="n">chat_created_result</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Chat creation failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.create_meeting">
 <span class="sig-name descname"><span class="pre">create_meeting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">organization_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.create_meeting" title="Link to this definition"></a></dt>
