@@ -20,10 +20,34 @@ lampiapi.mylogger module
    :undoc-members:
    :show-inheritance:
 
+lampiapi.remote\_ssh module
+---------------------------
+
+.. automodule:: lampiapi.remote_ssh
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 lampiapi.s3 module
 ------------------
 
 .. automodule:: lampiapi.s3
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+lampiapi.scaleway\_api module
+-----------------------------
+
+.. automodule:: lampiapi.scaleway_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+lampiapi.transcript\_api module
+-------------------------------
+
+.. automodule:: lampiapi.transcript_api
    :members:
    :undoc-members:
    :show-inheritance:
