@@ -679,12 +679,29 @@ Default is 3600 seconds (1 hour).</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.scaleway_api.ScaleWayAPI.delete_available_volumes">
+<span class="sig-name descname"><span class="pre">delete_available_volumes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.scaleway_api.ScaleWayAPI.delete_available_volumes" title="Link to this definition"></a></dt>
+<dd><p>Deletes all available volumes from the Scaleway API.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.scaleway_api.ScaleWayAPI.delete_instance_by_id">
 <span class="sig-name descname"><span class="pre">delete_instance_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.scaleway_api.ScaleWayAPI.delete_instance_by_id" title="Link to this definition"></a></dt>
 <dd><p>Deletes an instance from the Scaleway API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>server_id</strong> (<em>str</em>) – The ID of the server to delete.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.scaleway_api.ScaleWayAPI.delete_volume_by_id">
+<span class="sig-name descname"><span class="pre">delete_volume_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.scaleway_api.ScaleWayAPI.delete_volume_by_id" title="Link to this definition"></a></dt>
+<dd><p>Deletes a volume from the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>volume_id</strong> (<em>str</em>) – The ID of the volume to delete.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -785,6 +802,20 @@ Default is 3600 seconds (1 hour).</p></li>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.scaleway_api.ScaleWayAPI.get_volumes">
+<span class="sig-name descname"><span class="pre">get_volumes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.scaleway_api.ScaleWayAPI.get_volumes" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a list of volumes from the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The response data from the API, or None if the retrieval failed.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict or None</p>
 </dd>
 </dl>
 </dd></dl>
