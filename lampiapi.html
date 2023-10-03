@@ -856,10 +856,80 @@ Default is 3600 seconds (1 hour).</p></li>
 <dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.transcript_api.</span></span><span class="sig-name descname"><span class="pre">TranscriptAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'float32'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hf_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for performing audio transcription and speaker diarization using the Whisper ASR system.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI.audio_file_path">
+<span class="sig-name descname"><span class="pre">audio_file_path</span></span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.audio_file_path" title="Link to this definition"></a></dt>
+<dd><p>The path to the audio file to be transcribed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI.batch_size">
+<span class="sig-name descname"><span class="pre">batch_size</span></span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.batch_size" title="Link to this definition"></a></dt>
+<dd><p>The batch size for processing audio segments in parallel. Default is 4.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI.compute_type">
+<span class="sig-name descname"><span class="pre">compute_type</span></span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.compute_type" title="Link to this definition"></a></dt>
+<dd><p>The compute type for ASR model inference, can be “float32” or “int8”.
+Use “int8” if low on GPU memory (may reduce accuracy). Default is “float32”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI.hf_token">
+<span class="sig-name descname"><span class="pre">hf_token</span></span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.hf_token" title="Link to this definition"></a></dt>
+<dd><p>The Hugging Face API token for fine-tuning models. Default is None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI.language">
+<span class="sig-name descname"><span class="pre">language</span></span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.language" title="Link to this definition"></a></dt>
+<dd><p>The target language for transcription. If None, auto-detection is used.
+Default is None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl>
+<dt>Example usage:</dt><dd><p># Initialize the TranscriptAPI instance:
+api = TranscriptAPI(“audio.wav”, batch_size=4, compute_type=”float32”, hf_token=”YOUR_API_TOKEN”, language=”en”)</p>
+<p># Perform audio transcription and speaker diarization:
+api.transcript()</p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI.transcript">
 <span class="sig-name descname"><span class="pre">transcript</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.transcript" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Perform audio transcription and speaker diarization using the Whisper ASR system.</p>
+<dl class="simple">
+<dt>Example usage:</dt><dd><p>api.transcript()</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
