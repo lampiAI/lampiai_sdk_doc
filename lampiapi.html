@@ -915,18 +915,25 @@ Default is None.</p>
 </dd></dl>
 
 <dl>
-<dt>Example usage:</dt><dd><p># Initialize the TranscriptAPI instance:
-api = TranscriptAPI(“audio.wav”, batch_size=4, compute_type=”float32”, hf_token=”YOUR_API_TOKEN”, language=”en”)</p>
-<p># Perform audio transcription and speaker diarization:
-api.transcript()</p>
+<dt>Example usage:</dt><dd><p># Initialize the TranscriptAPI instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">TranscriptAPI</span><span class="p">(</span><span class="s2">&quot;audio.wav&quot;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">compute_type</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">,</span> <span class="n">hf_token</span><span class="o">=</span><span class="s2">&quot;YOUR_API_TOKEN&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt># Perform audio transcription and speaker diarization::</dt><dd><p>api.transcript()</p>
+</dd>
+</dl>
 </dd>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI.transcript">
 <span class="sig-name descname"><span class="pre">transcript</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.transcript" title="Link to this definition"></a></dt>
 <dd><p>Perform audio transcription and speaker diarization using the Whisper ASR system.</p>
-<dl class="simple">
-<dt>Example usage:</dt><dd><p>api.transcript()</p>
+<dl>
+<dt>Example usage:</dt><dd><p># Launch the transcript:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span><span class="o">.</span><span class="n">transcript</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd>
 </dl>
 </dd></dl>
