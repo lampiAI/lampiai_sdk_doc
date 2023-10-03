@@ -276,13 +276,14 @@ If not provided, a default logger will be created.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.update_status_by_id">
-<span class="sig-name descname"><span class="pre">update_status_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.update_status_by_id" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">update_status_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.update_status_by_id" title="Link to this definition"></a></dt>
 <dd><p>Update the status of a document by ID via the Lampi API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>document_id</strong> (<em>int</em>) – The ID of the document.</p></li>
 <li><p><strong>status</strong> (<em>str</em>) – The new status for the document.</p></li>
+<li><p><strong>extra_info</strong> (<em>dict</em>) – Extra information to include in the document using a json format.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -297,7 +298,8 @@ If not provided, a default logger will be created.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document_id</span> <span class="o">=</span> <span class="mi">456</span>
 <span class="n">new_status</span> <span class="o">=</span> <span class="s2">&quot;processed&quot;</span>
 <span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
-<span class="n">update_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">update_status_by_id</span><span class="p">(</span><span class="n">document_id</span><span class="p">,</span> <span class="n">new_status</span><span class="p">)</span>
+<span class="n">extra_info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;video&#39;</span><span class="p">:</span> <span class="s1">&#39;https://www.youtube.com/watch?v=123&#39;</span><span class="p">}</span>
+<span class="n">update_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">update_status_by_id</span><span class="p">(</span><span class="n">document_id</span><span class="p">,</span> <span class="n">new_status</span><span class="p">,</span> <span class="n">extra_info</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">update_result</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document </span><span class="si">%s</span><span class="s2"> status updated successfully!&quot;</span> <span class="o">%</span> <span class="n">update_result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
 <span class="k">else</span><span class="p">:</span>
