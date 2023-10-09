@@ -1018,11 +1018,22 @@ Default is None.</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI.transcript">
-<span class="sig-name descname"><span class="pre">transcript</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.transcript" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">transcript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diarization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.transcript" title="Link to this definition"></a></dt>
 <dd><p>Perform audio transcription and speaker diarization using the Whisper ASR system.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI.diarization">
+<span class="sig-name descname"><span class="pre">diarization</span></span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI.diarization" title="Link to this definition"></a></dt>
+<dd><p>Enable the Diarization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl>
 <dt>Example usage:</dt><dd><p># Launch the transcript:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span><span class="o">.</span><span class="n">transcript</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span><span class="o">.</span><span class="n">transcript</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd>
