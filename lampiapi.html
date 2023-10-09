@@ -202,11 +202,11 @@ If not provided, a default logger will be created.</p>
 <p># Create a summary task for a document_id:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;document_id&quot;</span><span class="p">:</span> <span class="mi">276</span><span class="p">}</span>
-<span class="n">task_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="p">(</span><span class="s2">&quot;create_global_summary_as_admin_for_document_id&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">task_result</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating summary tasks triggered successfully&quot;</span><span class="p">)</span>
+<span class="n">summary_result</span><span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="p">(</span><span class="s2">&quot;create_global_summary_as_admin_for_document_id&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">summary_result</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ok&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Summary successfully created&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating summary tasks failed.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The summary creation failed.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
