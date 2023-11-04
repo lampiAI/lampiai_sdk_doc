@@ -457,7 +457,7 @@ If not provided, a default logger will be created.</p>
 <span id="lampiapi-s3-module"></span><h2>lampiapi.s3 module<a class="headerlink" href="#module-lampiapi.s3" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="lampiapi.s3.S3">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.s3.</span></span><span class="sig-name descname"><span class="pre">S3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.s3.S3" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.s3.</span></span><span class="sig-name descname"><span class="pre">S3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.s3.S3" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class for interacting with Amazon S3 storage or any S3 compatible storage.</p>
 <p>This class provides methods to perform various operations on S3, such as
@@ -470,6 +470,17 @@ deleting files, and listing files in a specified S3 bucket.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.s3.S3.log_level">
+<span class="sig-name descname"><span class="pre">log_level</span></span><a class="headerlink" href="#lampiapi.s3.S3.log_level" title="Link to this definition"></a></dt>
+<dd><p>The log level for the logger. Default is “INFO”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
