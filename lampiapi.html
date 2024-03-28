@@ -70,6 +70,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.TaskManager"><code class="docutils literal notranslate"><span class="pre">TaskManager</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.TaskModel"><code class="docutils literal notranslate"><span class="pre">TaskModel</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus"><code class="docutils literal notranslate"><span class="pre">TaskStatus</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.TaskStatusNotRunning"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a></li>
 </ul>
 </li>
@@ -1119,11 +1120,11 @@ Default is 3600 seconds (1 hour).</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.clear_task_for_statuses">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task_for_statuses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statuses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.clear_task_for_statuses" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task_for_statuses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statuses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.task_manager.TaskStatusNotRunning" title="lampiapi.task_manager.TaskStatusNotRunning"><span class="pre">TaskStatusNotRunning</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.clear_task_for_statuses" title="Link to this definition"></a></dt>
 <dd><p>Clears tasks for the specified statuses.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>statuses</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><em>TaskStatus</em></a><em>]</em>) – The list of task statuses to clear.</p>
+<dd class="field-odd"><p><strong>statuses</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.task_manager.TaskStatusNotRunning" title="lampiapi.task_manager.TaskStatusNotRunning"><em>TaskStatusNotRunning</em></a><em>]</em>) – The list of task statuses to clear.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1138,6 +1139,17 @@ Default is 3600 seconds (1 hour).</p></li>
 <li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
 <li><p><strong>result</strong> (<em>str</em>) – The result of the task.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.delete_not_running_tasks">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_not_running_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.delete_not_running_tasks" title="Link to this definition"></a></dt>
+<dd><p>Deletes a task that is not running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_keys</strong> (<em>str</em>) – A task key.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1381,6 +1393,33 @@ Default is 3600 seconds (1 hour).</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatus.running">
 <span class="sig-name descname"><span class="pre">running</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'running'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatus.running" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatusNotRunning">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.task_manager.</span></span><span class="sig-name descname"><span class="pre">TaskStatusNotRunning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskStatusNotRunning" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatusNotRunning.all">
+<span class="sig-name descname"><span class="pre">all</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'all'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatusNotRunning.all" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatusNotRunning.completed">
+<span class="sig-name descname"><span class="pre">completed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'completed'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatusNotRunning.completed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatusNotRunning.failed">
+<span class="sig-name descname"><span class="pre">failed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatusNotRunning.failed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatusNotRunning.pending">
+<span class="sig-name descname"><span class="pre">pending</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatusNotRunning.pending" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2502,11 +2541,11 @@ Default is 3600 seconds (1 hour).</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.TaskManager.clear_task_for_statuses">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task_for_statuses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statuses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.clear_task_for_statuses" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task_for_statuses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statuses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.task_manager.TaskStatusNotRunning" title="lampiapi.task_manager.TaskStatusNotRunning"><span class="pre">TaskStatusNotRunning</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.clear_task_for_statuses" title="Link to this definition"></a></dt>
 <dd><p>Clears tasks for the specified statuses.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>statuses</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.TaskStatus" title="lampiapi.TaskStatus"><em>TaskStatus</em></a><em>]</em>) – The list of task statuses to clear.</p>
+<dd class="field-odd"><p><strong>statuses</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.task_manager.TaskStatusNotRunning" title="lampiapi.task_manager.TaskStatusNotRunning"><em>TaskStatusNotRunning</em></a><em>]</em>) – The list of task statuses to clear.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2521,6 +2560,17 @@ Default is 3600 seconds (1 hour).</p></li>
 <li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
 <li><p><strong>result</strong> (<em>str</em>) – The result of the task.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.delete_not_running_tasks">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_not_running_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.delete_not_running_tasks" title="Link to this definition"></a></dt>
+<dd><p>Deletes a task that is not running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_keys</strong> (<em>str</em>) – A task key.</p>
 </dd>
 </dl>
 </dd></dl>
