@@ -66,12 +66,29 @@
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.scaleway_api.ScaleWayAPI"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.task_manager">lampiapi.task_manager module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.TaskManager"><code class="docutils literal notranslate"><span class="pre">TaskManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.TaskModel"><code class="docutils literal notranslate"><span class="pre">TaskModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus"><code class="docutils literal notranslate"><span class="pre">TaskStatus</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.transcript_api">lampiapi.transcript_api module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.transcript_api.TranscriptAPI"><code class="docutils literal notranslate"><span class="pre">TranscriptAPI</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.transcript_api.detect_language"><code class="docutils literal notranslate"><span class="pre">detect_language()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#module-lampiapi">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-lampiapi">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.RemoteSSHClient"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.S3"><code class="docutils literal notranslate"><span class="pre">S3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.ScaleWayAPI"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskManager"><code class="docutils literal notranslate"><span class="pre">TaskManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskModel"><code class="docutils literal notranslate"><span class="pre">TaskModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskStatus"><code class="docutils literal notranslate"><span class="pre">TaskStatus</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1036,11 +1053,336 @@ Default is 3600 seconds (1 hour).</p></li>
 </dd></dl>
 
 </section>
+<section id="module-lampiapi.task_manager">
+<span id="lampiapi-task-manager-module"></span><h2>lampiapi.task_manager module<a class="headerlink" href="#module-lampiapi.task_manager" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.task_manager.</span></span><span class="sig-name descname"><span class="pre">TaskManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Redis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that manages tasks for a user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>redis</strong> (<em>Redis</em>) – The Redis client used for task storage.</p></li>
+<li><p><strong>user_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The ID of the user. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.clear_all_tasks">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_all_tasks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.clear_all_tasks" title="Link to this definition"></a></dt>
+<dd><p>Clears all tasks for the user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.clear_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.clear_task" title="Link to this definition"></a></dt>
+<dd><p>Clears a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.clear_task_for_statuses">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task_for_statuses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statuses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.clear_task_for_statuses" title="Link to this definition"></a></dt>
+<dd><p>Clears tasks for the specified statuses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>statuses</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><em>TaskStatus</em></a><em>]</em>) – The list of task statuses to clear.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.complete_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">complete_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.complete_task" title="Link to this definition"></a></dt>
+<dd><p>Completes a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
+<li><p><strong>result</strong> (<em>str</em>) – The result of the task.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.fail_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fail_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.fail_task" title="Link to this definition"></a></dt>
+<dd><p>Fails a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
+<li><p><strong>error_message</strong> (<em>str</em>) – The error message for the failed task.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.get_running_tasks">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_running_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">TaskStatus.running</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.get_running_tasks" title="Link to this definition"></a></dt>
+<dd><p>Retrieves running tasks for the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> (<a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><em>TaskStatus</em></a><em>, </em><em>optional</em>) – The status of the tasks to retrieve. Defaults to TaskStatus.running.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of running tasks.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#lampiapi.task_manager.TaskModel" title="lampiapi.task_manager.TaskModel">TaskModel</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.get_running_tasks_all_users">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_running_tasks_all_users</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">TaskStatus.running</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.get_running_tasks_all_users" title="Link to this definition"></a></dt>
+<dd><p>Retrieves running tasks for all users.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> (<a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><em>TaskStatus</em></a><em>, </em><em>optional</em>) – The status of the tasks to retrieve. Defaults to TaskStatus.running.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of running tasks for all users.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#lampiapi.task_manager.TaskModel" title="lampiapi.task_manager.TaskModel">TaskModel</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.get_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.task_manager.TaskModel" title="lampiapi.task_manager.TaskModel"><span class="pre">TaskModel</span></a></span></span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.get_task" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_key</strong> (<em>str</em>) – The key of the task.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The retrieved task.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.task_manager.TaskModel" title="lampiapi.task_manager.TaskModel">TaskModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.start_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.User_info" title="lampiapi.task_manager.User_info"><span class="pre">User_info</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.start_task" title="Link to this definition"></a></dt>
+<dd><p>Starts a new task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
+<li><p><strong>task_type</strong> (<em>str</em>) – The type of the task.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the task.</p></li>
+<li><p><strong>data</strong> (<em>dict</em><em>, </em><em>optional</em>) – Additional data for the task. Defaults to None.</p></li>
+<li><p><strong>user_info</strong> (<a class="reference internal" href="#lampiapi.task_manager.User_info" title="lampiapi.task_manager.User_info"><em>User_info</em></a><em>, </em><em>optional</em>) – User information associated with the task. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.update_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remaining_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimated_total_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">TaskStatus.running</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">note_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.update_task" title="Link to this definition"></a></dt>
+<dd><p>Updates a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
+<li><p><strong>remaining_time</strong> (<em>float</em><em>, </em><em>optional</em>) – The remaining time for the task. Defaults to None.</p></li>
+<li><p><strong>estimated_total_time</strong> (<em>float</em><em>, </em><em>optional</em>) – The estimated total time for the task. Defaults to None.</p></li>
+<li><p><strong>status</strong> (<a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><em>TaskStatus</em></a><em>, </em><em>optional</em>) – The status of the task. Defaults to TaskStatus.running.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the task. Defaults to None.</p></li>
+<li><p><strong>note_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The ID of the note associated with the task. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.task_manager.</span></span><span class="sig-name descname"><span class="pre">TaskModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">TaskStatus.pending</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elapsed_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remaining_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimated_total_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">note_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.User_info" title="lampiapi.task_manager.User_info"><span class="pre">User_info</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#lampiapi.task_manager.TaskModel.Config" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.Config.json_encoders">
+<span class="sig-name descname"><span class="pre">json_encoders</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&lt;class</span> <span class="pre">'datetime.datetime'&gt;:</span> <span class="pre">&lt;function</span> <span class="pre">TaskModel.Config.&lt;lambda&gt;&gt;}</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.Config.json_encoders" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.elapsed_time">
+<span class="sig-name descname"><span class="pre">elapsed_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.elapsed_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.end_time">
+<span class="sig-name descname"><span class="pre">end_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.end_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.estimated_total_time">
+<span class="sig-name descname"><span class="pre">estimated_total_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.estimated_total_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.note_id">
+<span class="sig-name descname"><span class="pre">note_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.note_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.remaining_time">
+<span class="sig-name descname"><span class="pre">remaining_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.remaining_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.result">
+<span class="sig-name descname"><span class="pre">result</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.result" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.start_time">
+<span class="sig-name descname"><span class="pre">start_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.start_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.status">
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.status" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.task_id">
+<span class="sig-name descname"><span class="pre">task_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.task_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.task_type">
+<span class="sig-name descname"><span class="pre">task_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.task_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.user_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskModel.user_info">
+<span class="sig-name descname"><span class="pre">user_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lampiapi.task_manager.User_info" title="lampiapi.task_manager.User_info"><span class="pre">User_info</span></a></em><a class="headerlink" href="#lampiapi.task_manager.TaskModel.user_info" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.task_manager.</span></span><span class="sig-name descname"><span class="pre">TaskStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskStatus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatus.all">
+<span class="sig-name descname"><span class="pre">all</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'all'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatus.all" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatus.completed">
+<span class="sig-name descname"><span class="pre">completed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'completed'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatus.completed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatus.failed">
+<span class="sig-name descname"><span class="pre">failed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatus.failed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatus.pending">
+<span class="sig-name descname"><span class="pre">pending</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatus.pending" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatus.running">
+<span class="sig-name descname"><span class="pre">running</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'running'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatus.running" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.task_manager.User_info">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.task_manager.</span></span><span class="sig-name descname"><span class="pre">User_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">department_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_user_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tools</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toolname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.User_info" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.User_info.channel">
+<span class="sig-name descname"><span class="pre">channel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.task_manager.User_info.channel" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.User_info.department_id">
+<span class="sig-name descname"><span class="pre">department_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#lampiapi.task_manager.User_info.department_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.User_info.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.task_manager.User_info.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.User_info.query">
+<span class="sig-name descname"><span class="pre">query</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.task_manager.User_info.query" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.User_info.store_user_message">
+<span class="sig-name descname"><span class="pre">store_user_message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#lampiapi.task_manager.User_info.store_user_message" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.User_info.toolname">
+<span class="sig-name descname"><span class="pre">toolname</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.task_manager.User_info.toolname" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.User_info.tools">
+<span class="sig-name descname"><span class="pre">tools</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#lampiapi.task_manager.User_info.tools" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-lampiapi.transcript_api">
 <span id="lampiapi-transcript-api-module"></span><h2>lampiapi.transcript_api module<a class="headerlink" href="#module-lampiapi.transcript_api" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="lampiapi.transcript_api.TranscriptAPI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.transcript_api.</span></span><span class="sig-name descname"><span class="pre">TranscriptAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'float32'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hf_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.transcript_api.</span></span><span class="sig-name descname"><span class="pre">TranscriptAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">audio_file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'float32'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hf_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whisper_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'large-v2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.transcript_api.TranscriptAPI" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class for performing audio transcription and speaker diarization using the Whisper ASR system.</p>
 <dl class="py attribute">
@@ -1145,6 +1487,1230 @@ Default is None.</p>
 </section>
 <section id="module-lampiapi">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lampiapi" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">LampiAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.LampiAPI" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for interacting with the Lampi API.
+ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#lampiapi.LampiAPI.logger" title="Link to this definition"></a></dt>
+<dd><p>The logger object used for logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>logger</strong> (<em>Logger</em><em>, </em><em>optional</em>) – An optional logger object to use for logging.
+If not provided, a default logger will be created.</p>
+</dd>
+</dl>
+<dl>
+<dt>Environment Variables:</dt><dd><p>ADMINAUTH (str): The lampi API authentication secret.</p>
+<p>BACK_URL (str): The lampi API url.</p>
+</dd>
+<dt>Example usage:</dt><dd><p># Initialize the LampiAPI instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+</pre></div>
+</div>
+<p># Initialize with a custom logger:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">custom_logger</span> <span class="o">=</span> <span class="n">MyLogger</span><span class="p">(</span><span class="s2">&quot;custom_logger&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">(</span><span class="n">custom_logger</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.create_chat_meeting">
+<span class="sig-name descname"><span class="pre">create_chat_meeting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">department_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.create_chat_meeting" title="Link to this definition"></a></dt>
+<dd><p>Create a chat to manage a meeting via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>document_id</strong> (<em>int</em>) – The ID of the meeting document ID.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the chat.</p></li>
+<li><p><strong>department_id</strong> (<em>int</em>) – The department_id to create the chat for.</p></li>
+<li><p><strong>email</strong> (<em>str</em>) – The email of the user who created the meeting.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Create a chat via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document_id</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;A meeting with Google&quot;</span>
+<span class="n">department_id</span> <span class="o">=</span> <span class="mi">456</span>
+<span class="n">email</span> <span class="o">=</span> <span class="s2">&quot;test@gmail.com&quot;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">chat_created_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_chat_meeting</span><span class="p">(</span><span class="n">document_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">department_id</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">chat_created_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Chat </span><span class="si">%s</span><span class="s2"> created successfully&quot;</span> <span class="o">%</span> <span class="n">chat_created_result</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Chat creation failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.create_global_summary_as_admin_for_document_id">
+<span class="sig-name descname"><span class="pre">create_global_summary_as_admin_for_document_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.create_global_summary_as_admin_for_document_id" title="Link to this definition"></a></dt>
+<dd><p>Create a summary for a given document_id via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>document_id</strong> (<em>int</em>) – The document_id to summurize.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Create a summary task for a document_id:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;document_id&quot;</span><span class="p">:</span> <span class="mi">276</span><span class="p">,</span> <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">}</span>
+<span class="n">summary_result</span><span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="p">(</span><span class="s2">&quot;create_global_summary_as_admin_for_document_id&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">summary_result</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ok&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Summary successfully created&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The summary creation failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.create_meeting">
+<span class="sig-name descname"><span class="pre">create_meeting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">organization_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.create_meeting" title="Link to this definition"></a></dt>
+<dd><p>Create a meeting via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>organization_id</strong> (<em>int</em>) – The ID of the organization.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – The name of the meeting file.</p></li>
+<li><p><strong>file_type</strong> (<em>str</em>) – The file type of the file.</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – The size of the meeting file.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the meeting.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Create a meeting via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">organization_id</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;example_meeting.txt&quot;</span>
+<span class="n">size</span> <span class="o">=</span> <span class="mi">1024</span>  <span class="c1"># Size in bytes</span>
+<span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;scheduled&quot;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">meeting_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_meeting</span><span class="p">(</span><span class="n">organization_id</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span><span class="n">file_type</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">meeting_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Meeting </span><span class="si">%s</span><span class="s2"> created successfully&quot;</span> <span class="o">%</span> <span class="n">meeting_result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Meeting creation failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.get_document_by_id">
+<span class="sig-name descname"><span class="pre">get_document_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.get_document_by_id" title="Link to this definition"></a></dt>
+<dd><p>Get a document by ID via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>document_id</strong> (<em>int</em>) – The ID of the document.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Get a document by ID:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document_id</span> <span class="o">=</span> <span class="mi">456</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">document_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_document_by_id</span><span class="p">(</span><span class="n">document_id</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">document_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document </span><span class="si">%s</span><span class="s2"> retrieved successfully!&quot;</span> <span class="o">%</span> <span class="n">document_result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document retrieval failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.get_document_status_by_id">
+<span class="sig-name descname"><span class="pre">get_document_status_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.get_document_status_by_id" title="Link to this definition"></a></dt>
+<dd><p>Get the status of a document by ID via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>document_id</strong> (<em>int</em>) – The ID of the document.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Get the status of a document by ID:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document_id</span> <span class="o">=</span> <span class="mi">456</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">status_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_document_status_by_id</span><span class="p">(</span><span class="n">document_id</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">status_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document status is </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">status_result</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Status retrieval failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.trigger_task">
+<span class="sig-name descname"><span class="pre">trigger_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.trigger_task" title="Link to this definition"></a></dt>
+<dd><p>Trigger a task via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task</strong> (<em>str</em>) – The task to trigger.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Create a summary task:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">task_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="p">(</span><span class="s2">&quot;create_global_summary_as_admin&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">task_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating summary tasks triggered successfully&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating summary tasks failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.update_status_by_id">
+<span class="sig-name descname"><span class="pre">update_status_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.update_status_by_id" title="Link to this definition"></a></dt>
+<dd><p>Update the status of a document by ID via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>document_id</strong> (<em>int</em>) – The ID of the document.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The new status for the document.</p></li>
+<li><p><strong>extra_info</strong> (<em>dict</em>) – Extra information to include in the document using a json format.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the document.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Update the status of a document by ID and change name and extra_info:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document_id</span> <span class="o">=</span> <span class="mi">456</span>
+<span class="n">new_status</span> <span class="o">=</span> <span class="s2">&quot;processed&quot;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">extra_info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;video&#39;</span><span class="p">:</span> <span class="s1">&#39;https://www.youtube.com/watch?v=123&#39;</span><span class="p">}</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;new Name&quot;</span>
+<span class="n">update_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">update_status_by_id</span><span class="p">(</span><span class="n">document_id</span><span class="p">,</span> <span class="n">new_status</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">extra_info</span><span class="o">=</span><span class="n">extra_info</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">update_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document </span><span class="si">%s</span><span class="s2"> status updated successfully!&quot;</span> <span class="o">%</span> <span class="n">update_result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Status update failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># Update the status of a document by ID:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">document_id</span> <span class="o">=</span> <span class="mi">456</span>
+<span class="n">new_status</span> <span class="o">=</span> <span class="s2">&quot;processed&quot;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">update_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">update_status_by_id</span><span class="p">(</span><span class="n">document_id</span><span class="p">,</span> <span class="n">new_status</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">update_result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document </span><span class="si">%s</span><span class="s2"> status updated successfully!&quot;</span> <span class="o">%</span> <span class="n">update_result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Status update failed.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.user_by_email">
+<span class="sig-name descname"><span class="pre">user_by_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.user_by_email" title="Link to this definition"></a></dt>
+<dd><p>Get a user by email via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>email</strong> (<em>str</em>) – The email of the user.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Get a user by email via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">db_user</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">user_by_email</span><span class="p">(</span><span class="n">email</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db_user</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">db_user</span><span class="p">[</span><span class="s2">&quot;organization_id&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.RemoteSSHClient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">RemoteSSHClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hostname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passphrase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.RemoteSSHClient" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.RemoteSSHClient.check_connection">
+<span class="sig-name descname"><span class="pre">check_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.RemoteSSHClient.check_connection" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.RemoteSSHClient.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.RemoteSSHClient.close" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.RemoteSSHClient.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.RemoteSSHClient.connect" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.RemoteSSHClient.execute_commands">
+<span class="sig-name descname"><span class="pre">execute_commands</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">commands</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.RemoteSSHClient.execute_commands" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.RemoteSSHClient.sftp_transfer">
+<span class="sig-name descname"><span class="pre">sftp_transfer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upload</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.RemoteSSHClient.sftp_transfer" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.S3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">S3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.S3" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for interacting with Amazon S3 storage or any S3 compatible storage.</p>
+<p>This class provides methods to perform various operations on S3, such as
+creating presigned URLs for file uploads and downloads, getting files from S3,
+deleting files, and listing files in a specified S3 bucket.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.S3.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#lampiapi.S3.logger" title="Link to this definition"></a></dt>
+<dd><p>The logger object used for logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logger</strong> (<em>Logger</em><em>, </em><em>optional</em>) – An optional logger object to use for logging.
+If not provided, a default logger will be created.</p></li>
+<li><p><strong>log_level</strong> (<em>str</em>) – The log level for the logger. Default is “INFO”.</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>Environment Variables:</dt><dd><p>AWS_S3 (str): The value of the AWS_S3 environment variable (True for Amazon S3 False for a compatible S3).</p>
+<p>AWS_PUBLIC (str): The value of the AWS_PUBLIC environment variable.</p>
+<p>AWS_SECRET (str): The value of the AWS_SECRET environment variable.</p>
+<p>ENDPOINT (str): The value of the ENDPOINT environment variable.</p>
+<p>DIRECTORY_PATH (str): The value of the DIRECTORY_PATH environment variable.</p>
+</dd>
+<dt>Example usage:</dt><dd><p># Initialize the S3 client:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">lampiapi</span> <span class="kn">import</span> <span class="n">S3</span>
+<span class="n">s3_client</span> <span class="o">=</span> <span class="n">S3</span><span class="p">()</span>
+</pre></div>
+</div>
+<p># Create a presigned URL for uploading a file to S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">upload_url</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">create_presigned_post</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span> <span class="s2">&quot;my-object&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># Create a presigned URL for downloading a file from S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">download_url</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">create_presigned_url</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span> <span class="s2">&quot;my-object&quot;</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">department_id</span><span class="p">,</span> <span class="s2">&quot;pdf&quot;</span><span class="p">,</span> <span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># Get a file from S3 and save it locally:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s3_client</span><span class="o">.</span><span class="n">get_file</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span> <span class="s2">&quot;my-object&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># Delete a file from S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deleted</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">delete_files</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span> <span class="s2">&quot;my-object&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># List files in an S3 bucket:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file_count</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">list_files</span><span class="p">(</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.create_presigned_post">
+<span class="sig-name descname"><span class="pre">create_presigned_post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expiration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.S3.create_presigned_post" title="Link to this definition"></a></dt>
+<dd><p>Generate a presigned POST URL for uploading a file to an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be uploaded to the bucket.</p></li>
+<li><p><strong>fields</strong> (<em>dict</em><em>, </em><em>optional</em>) – A dictionary of additional form fields to include in the
+presigned URL. These fields can be used to specify conditions for the upload.
+Default is None.</p></li>
+<li><p><strong>conditions</strong> (<em>list</em><em>, </em><em>optional</em>) – A list of conditions to apply to the presigned URL.
+Each condition is a dictionary with ‘acl’, ‘bucket’, ‘content-length-range’,
+or other S3 conditions as keys. Default is None.</p></li>
+<li><p><strong>expiration</strong> (<em>int</em><em>, </em><em>optional</em>) – The expiration time for the presigned URL in seconds.
+Default is 60 seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>The generated presigned POST URL for uploading the file to S3.</dt><dd><p>Returns None if there was an error generating the URL.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Generate a presigned POST URL for uploading a file to S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">upload_url</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">create_presigned_post</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;my-object&quot;</span><span class="p">,</span>
+    <span class="n">fields</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;acl&quot;</span><span class="p">:</span> <span class="s2">&quot;public-read&quot;</span><span class="p">},</span>
+    <span class="n">expiration</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.create_presigned_url">
+<span class="sig-name descname"><span class="pre">create_presigned_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">department_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expiration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3600</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.S3.create_presigned_url" title="Link to this definition"></a></dt>
+<dd><p>Generate a presigned URL for downloading a file from an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be downloaded from the bucket.</p></li>
+<li><p><strong>organization_id</strong> (<em>int</em>) – The ID of the organization associated with the file.</p></li>
+<li><p><strong>department_id</strong> (<em>int</em>) – The ID of the department associated with the file.</p></li>
+<li><p><strong>file_type</strong> (<em>str</em>) – The type of the file (e.g., ‘pdf’, ‘jpg’).</p></li>
+<li><p><strong>document_id</strong> (<em>int</em>) – The unique ID of the document.</p></li>
+<li><p><strong>expiration</strong> (<em>int</em><em>, </em><em>optional</em>) – The expiration time for the presigned URL in seconds.
+Default is 3600 seconds (1 hour).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The generated presigned URL for downloading the file from S3.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Generate a presigned URL for downloading a PDF document from S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">download_url</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">create_presigned_url</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+    <span class="n">organization_id</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span>
+    <span class="n">department_id</span><span class="o">=</span><span class="mi">456</span><span class="p">,</span>
+    <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;pdf&quot;</span><span class="p">,</span>
+    <span class="n">document_id</span><span class="o">=</span><span class="mi">789</span><span class="p">,</span>
+    <span class="n">expiration</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.delete_files">
+<span class="sig-name descname"><span class="pre">delete_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.S3.delete_files" title="Link to this definition"></a></dt>
+<dd><p>Delete a file from an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be deleted from the bucket.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the file was successfully deleted, False if there was an error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Delete a file from S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deleted</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">delete_files</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.get_file">
+<span class="sig-name descname"><span class="pre">get_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.S3.get_file" title="Link to this definition"></a></dt>
+<dd><p>Download a file from an Amazon S3 bucket and save it locally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be downloaded from the bucket.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Download a file from S3 and save it locally:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s3_client</span><span class="o">.</span><span class="n">get_file</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.get_file_payload">
+<span class="sig-name descname"><span class="pre">get_file_payload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.S3.get_file_payload" title="Link to this definition"></a></dt>
+<dd><p>Get a file payload from an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be downloaded from the bucket.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The file payload. Returns None if there was an error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Get an object from S3 and return a buffer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s3_client</span><span class="o">.</span><span class="n">get_file_payload</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.list_files">
+<span class="sig-name descname"><span class="pre">list_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lampiapi.S3.list_files" title="Link to this definition"></a></dt>
+<dd><p>List the files in an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>The number of files in the bucket. Returns 0 if there are no files or</dt><dd><p>if there was an error listing the files.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># List files in an S3 bucket:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file_count</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">list_files</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.put_file">
+<span class="sig-name descname"><span class="pre">put_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.S3.put_file" title="Link to this definition"></a></dt>
+<dd><p>Upload a file to an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be uploaded to the bucket.</p></li>
+<li><p><strong>file_path</strong> (<em>str</em>) – The path to the file to be uploaded.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Upload a file to S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s3_client</span><span class="o">.</span><span class="n">put_file</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+    <span class="n">file_path</span><span class="o">=</span><span class="s2">&quot;./example.pdf&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.put_file_blob">
+<span class="sig-name descname"><span class="pre">put_file_blob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.S3.put_file_blob" title="Link to this definition"></a></dt>
+<dd><p>Upload a file to an Amazon S3 bucket.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be uploaded to the bucket.</p></li>
+<li><p><strong>file_blob</strong> (<em>str</em>) – The file blob to be uploaded.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Upload a file to S3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s3_client</span><span class="o">.</span><span class="n">put_file_blob</span><span class="p">(</span>
+    <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
+    <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+    <span class="n">file_blob</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.recursive_delete_s3_objects">
+<span class="sig-name descname"><span class="pre">recursive_delete_s3_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.S3.recursive_delete_s3_objects" title="Link to this definition"></a></dt>
+<dd><p>Recursively deletes all objects in an S3 bucket with the given prefix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>prefix</strong> (<em>str</em>) – The prefix of the objects to delete.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if all objects were successfully deleted, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.S3.recursive_download_s3_objects">
+<span class="sig-name descname"><span class="pre">recursive_download_s3_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.S3.recursive_download_s3_objects" title="Link to this definition"></a></dt>
+<dd><p>Recursively downloads all objects in an S3 bucket with the given prefix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
+<li><p><strong>prefix</strong> (<em>str</em>) – The prefix of the objects to download.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if all objects were successfully downloaded, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">ScaleWayAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commercial_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'b_ssd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_volume</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'x86_64'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.ScaleWayAPI" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class representing the Scaleway API.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.create_a_vm">
+<span class="sig-name descname"><span class="pre">create_a_vm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.create_a_vm" title="Link to this definition"></a></dt>
+<dd><p>Create an instance on the Scaleway API.
+:returns: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.create_instance">
+<span class="sig-name descname"><span class="pre">create_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.create_instance" title="Link to this definition"></a></dt>
+<dd><p>Creates a new instance on the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image_id</strong> (<em>str</em>) – The ID of the image to use for the instance.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The response data from the API, or None if the instance creation failed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.create_volume">
+<span class="sig-name descname"><span class="pre">create_volume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.create_volume" title="Link to this definition"></a></dt>
+<dd><p>Creates a new volume on the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The response data from the API, or None if the volume creation failed.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.delete_available_volumes">
+<span class="sig-name descname"><span class="pre">delete_available_volumes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.delete_available_volumes" title="Link to this definition"></a></dt>
+<dd><p>Deletes all available volumes from the Scaleway API.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.delete_instance_by_id">
+<span class="sig-name descname"><span class="pre">delete_instance_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.delete_instance_by_id" title="Link to this definition"></a></dt>
+<dd><p>Deletes an instance from the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>server_id</strong> (<em>str</em>) – The ID of the server to delete.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.delete_volume_by_id">
+<span class="sig-name descname"><span class="pre">delete_volume_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.delete_volume_by_id" title="Link to this definition"></a></dt>
+<dd><p>Deletes a volume from the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>volume_id</strong> (<em>str</em>) – The ID of the volume to delete.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.get_images">
+<span class="sig-name descname"><span class="pre">get_images</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.get_images" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a list of available images from the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the image to use for the instance, or None if no suitable image is found.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.get_instance_by_id">
+<span class="sig-name descname"><span class="pre">get_instance_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.get_instance_by_id" title="Link to this definition"></a></dt>
+<dd><p>Retrieves an instance from the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>server_id</strong> (<em>str</em>) – The ID of the server to retrieve.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The response data from the API, or None if the retrieval failed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.get_instances">
+<span class="sig-name descname"><span class="pre">get_instances</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.get_instances" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a list of instances from the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The response data from the API, or None if the retrieval failed.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.get_servers">
+<span class="sig-name descname"><span class="pre">get_servers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.get_servers" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a list of available server products from the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the commercial type is available, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.get_vm_created">
+<span class="sig-name descname"><span class="pre">get_vm_created</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">300</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poll_interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.get_vm_created" title="Link to this definition"></a></dt>
+<dd><p>Waits for a Scaleway VM to be created and returns the server object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout</strong> (<em>int</em>) – The maximum amount of time to wait for the VM to be created, in seconds. Defaults to 300 seconds.</p></li>
+<li><p><strong>poll_interval</strong> (<em>int</em>) – The interval at which to poll the Scaleway API for the VM status, in seconds. Defaults to 10 seconds.</p></li>
+<li><p><strong>poll_interval</strong> – int</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The response data from the API, or None if the retrieval failed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.get_vm_status">
+<span class="sig-name descname"><span class="pre">get_vm_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'stopped'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">300</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poll_interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_progress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.get_vm_status" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the status of an instance on the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>server_id</strong> (<em>str</em>) – The ID of the server to retrieve the status of.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The desired status of the server.</p></li>
+<li><p><strong>timeout</strong> (<em>int</em>) – The maximum amount of time to wait for the server to reach the desired status.</p></li>
+<li><p><strong>poll_interval</strong> (<em>int</em>) – The interval at which to poll the server status.</p></li>
+<li><p><strong>log_progress</strong> (<em>bool</em>) – Whether to log the progress of the status retrieval.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.get_volumes">
+<span class="sig-name descname"><span class="pre">get_volumes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.get_volumes" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a list of volumes from the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The response data from the API, or None if the retrieval failed.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.perform_instance_action_by_id">
+<span class="sig-name descname"><span class="pre">perform_instance_action_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'poweron'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.perform_instance_action_by_id" title="Link to this definition"></a></dt>
+<dd><p>Performs an action on an instance on the Scaleway API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>server_id</strong> (<em>str</em>) – The ID of the server to perform the action on.</p></li>
+<li><p><strong>action</strong> (<em>str</em>) – The action to perform on the server.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The response data from the API, or None if the action failed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.start_a_vm">
+<span class="sig-name descname"><span class="pre">start_a_vm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.start_a_vm" title="Link to this definition"></a></dt>
+<dd><p>Start an instance on the Scaleway API.
+:returns: dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.stop_a_vm">
+<span class="sig-name descname"><span class="pre">stop_a_vm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.stop_a_vm" title="Link to this definition"></a></dt>
+<dd><p>Stop an instance on the Scaleway API.
+:returns: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.ScaleWayAPI.stop_and_destroy_vm">
+<span class="sig-name descname"><span class="pre">stop_and_destroy_vm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.ScaleWayAPI.stop_and_destroy_vm" title="Link to this definition"></a></dt>
+<dd><p>Stop and and destroy an instance on the Scaleway API.
+:returns: None</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.TaskManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">TaskManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Redis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that manages tasks for a user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>redis</strong> (<em>Redis</em>) – The Redis client used for task storage.</p></li>
+<li><p><strong>user_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The ID of the user. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.clear_all_tasks">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_all_tasks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.clear_all_tasks" title="Link to this definition"></a></dt>
+<dd><p>Clears all tasks for the user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.clear_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.clear_task" title="Link to this definition"></a></dt>
+<dd><p>Clears a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.clear_task_for_statuses">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task_for_statuses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statuses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.clear_task_for_statuses" title="Link to this definition"></a></dt>
+<dd><p>Clears tasks for the specified statuses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>statuses</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.TaskStatus" title="lampiapi.TaskStatus"><em>TaskStatus</em></a><em>]</em>) – The list of task statuses to clear.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.complete_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">complete_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.complete_task" title="Link to this definition"></a></dt>
+<dd><p>Completes a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
+<li><p><strong>result</strong> (<em>str</em>) – The result of the task.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.fail_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fail_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.fail_task" title="Link to this definition"></a></dt>
+<dd><p>Fails a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
+<li><p><strong>error_message</strong> (<em>str</em>) – The error message for the failed task.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.get_running_tasks">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_running_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">TaskStatus.running</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.get_running_tasks" title="Link to this definition"></a></dt>
+<dd><p>Retrieves running tasks for the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> (<a class="reference internal" href="#lampiapi.TaskStatus" title="lampiapi.TaskStatus"><em>TaskStatus</em></a><em>, </em><em>optional</em>) – The status of the tasks to retrieve. Defaults to TaskStatus.running.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of running tasks.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#lampiapi.TaskModel" title="lampiapi.TaskModel">TaskModel</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.get_running_tasks_all_users">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_running_tasks_all_users</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">TaskStatus.running</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.get_running_tasks_all_users" title="Link to this definition"></a></dt>
+<dd><p>Retrieves running tasks for all users.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> (<a class="reference internal" href="#lampiapi.TaskStatus" title="lampiapi.TaskStatus"><em>TaskStatus</em></a><em>, </em><em>optional</em>) – The status of the tasks to retrieve. Defaults to TaskStatus.running.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of running tasks for all users.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#lampiapi.TaskModel" title="lampiapi.TaskModel">TaskModel</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.get_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.task_manager.TaskModel" title="lampiapi.task_manager.TaskModel"><span class="pre">TaskModel</span></a></span></span><a class="headerlink" href="#lampiapi.TaskManager.get_task" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_key</strong> (<em>str</em>) – The key of the task.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The retrieved task.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.TaskModel" title="lampiapi.TaskModel">TaskModel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.start_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.User_info" title="lampiapi.task_manager.User_info"><span class="pre">User_info</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.start_task" title="Link to this definition"></a></dt>
+<dd><p>Starts a new task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
+<li><p><strong>task_type</strong> (<em>str</em>) – The type of the task.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the task.</p></li>
+<li><p><strong>data</strong> (<em>dict</em><em>, </em><em>optional</em>) – Additional data for the task. Defaults to None.</p></li>
+<li><p><strong>user_info</strong> (<a class="reference internal" href="#lampiapi.User_info" title="lampiapi.User_info"><em>User_info</em></a><em>, </em><em>optional</em>) – User information associated with the task. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.update_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remaining_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimated_total_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">TaskStatus.running</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">note_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.update_task" title="Link to this definition"></a></dt>
+<dd><p>Updates a task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_id</strong> (<em>str</em>) – The ID of the task.</p></li>
+<li><p><strong>remaining_time</strong> (<em>float</em><em>, </em><em>optional</em>) – The remaining time for the task. Defaults to None.</p></li>
+<li><p><strong>estimated_total_time</strong> (<em>float</em><em>, </em><em>optional</em>) – The estimated total time for the task. Defaults to None.</p></li>
+<li><p><strong>status</strong> (<a class="reference internal" href="#lampiapi.TaskStatus" title="lampiapi.TaskStatus"><em>TaskStatus</em></a><em>, </em><em>optional</em>) – The status of the task. Defaults to TaskStatus.running.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the task. Defaults to None.</p></li>
+<li><p><strong>note_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The ID of the note associated with the task. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.TaskModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">TaskModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">TaskStatus.pending</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elapsed_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remaining_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimated_total_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">note_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.task_manager.User_info" title="lampiapi.task_manager.User_info"><span class="pre">User_info</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskModel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#lampiapi.TaskModel.Config" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.Config.json_encoders">
+<span class="sig-name descname"><span class="pre">json_encoders</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&lt;class</span> <span class="pre">'datetime.datetime'&gt;:</span> <span class="pre">&lt;function</span> <span class="pre">TaskModel.Config.&lt;lambda&gt;&gt;}</span></em><a class="headerlink" href="#lampiapi.TaskModel.Config.json_encoders" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#lampiapi.TaskModel.data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.TaskModel.description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.elapsed_time">
+<span class="sig-name descname"><span class="pre">elapsed_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.TaskModel.elapsed_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.end_time">
+<span class="sig-name descname"><span class="pre">end_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.TaskModel.end_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.estimated_total_time">
+<span class="sig-name descname"><span class="pre">estimated_total_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.TaskModel.estimated_total_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.TaskModel.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.note_id">
+<span class="sig-name descname"><span class="pre">note_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#lampiapi.TaskModel.note_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.remaining_time">
+<span class="sig-name descname"><span class="pre">remaining_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.TaskModel.remaining_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.result">
+<span class="sig-name descname"><span class="pre">result</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.TaskModel.result" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.start_time">
+<span class="sig-name descname"><span class="pre">start_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lampiapi.TaskModel.start_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.status">
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lampiapi.task_manager.TaskStatus" title="lampiapi.task_manager.TaskStatus"><span class="pre">TaskStatus</span></a></em><a class="headerlink" href="#lampiapi.TaskModel.status" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.task_id">
+<span class="sig-name descname"><span class="pre">task_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.TaskModel.task_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.task_type">
+<span class="sig-name descname"><span class="pre">task_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.TaskModel.task_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#lampiapi.TaskModel.user_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskModel.user_info">
+<span class="sig-name descname"><span class="pre">user_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lampiapi.task_manager.User_info" title="lampiapi.task_manager.User_info"><span class="pre">User_info</span></a></em><a class="headerlink" href="#lampiapi.TaskModel.user_info" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.TaskStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">TaskStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskStatus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatus.all">
+<span class="sig-name descname"><span class="pre">all</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'all'</span></em><a class="headerlink" href="#lampiapi.TaskStatus.all" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatus.completed">
+<span class="sig-name descname"><span class="pre">completed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'completed'</span></em><a class="headerlink" href="#lampiapi.TaskStatus.completed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatus.failed">
+<span class="sig-name descname"><span class="pre">failed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed'</span></em><a class="headerlink" href="#lampiapi.TaskStatus.failed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatus.pending">
+<span class="sig-name descname"><span class="pre">pending</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending'</span></em><a class="headerlink" href="#lampiapi.TaskStatus.pending" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatus.running">
+<span class="sig-name descname"><span class="pre">running</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'running'</span></em><a class="headerlink" href="#lampiapi.TaskStatus.running" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.User_info">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">User_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">department_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">store_user_message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tools</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toolname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.User_info" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.User_info.channel">
+<span class="sig-name descname"><span class="pre">channel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.User_info.channel" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.User_info.department_id">
+<span class="sig-name descname"><span class="pre">department_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#lampiapi.User_info.department_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.User_info.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.User_info.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.User_info.query">
+<span class="sig-name descname"><span class="pre">query</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.User_info.query" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.User_info.store_user_message">
+<span class="sig-name descname"><span class="pre">store_user_message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#lampiapi.User_info.store_user_message" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.User_info.toolname">
+<span class="sig-name descname"><span class="pre">toolname</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.User_info.toolname" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.User_info.tools">
+<span class="sig-name descname"><span class="pre">tools</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#lampiapi.User_info.tools" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 

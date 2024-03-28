@@ -44,6 +44,14 @@ lampiapi.scaleway\_api module
    :undoc-members:
    :show-inheritance:
 
+lampiapi.task\_manager module
+-----------------------------
+
+.. automodule:: lampiapi.task_manager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 lampiapi.transcript\_api module
 -------------------------------
 
