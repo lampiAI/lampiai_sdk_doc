@@ -87,6 +87,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskManager"><code class="docutils literal notranslate"><span class="pre">TaskManager</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskModel"><code class="docutils literal notranslate"><span class="pre">TaskModel</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskStatus"><code class="docutils literal notranslate"><span class="pre">TaskStatus</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskStatusNotRunning"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a></li>
 </ul>
 </li>
@@ -2545,7 +2546,7 @@ Default is 3600 seconds (1 hour).</p></li>
 <dd><p>Clears tasks for the specified statuses.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>statuses</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.task_manager.TaskStatusNotRunning" title="lampiapi.task_manager.TaskStatusNotRunning"><em>TaskStatusNotRunning</em></a><em>]</em>) – The list of task statuses to clear.</p>
+<dd class="field-odd"><p><strong>statuses</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.TaskStatusNotRunning" title="lampiapi.TaskStatusNotRunning"><em>TaskStatusNotRunning</em></a><em>]</em>) – The list of task statuses to clear.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2814,6 +2815,33 @@ Default is 3600 seconds (1 hour).</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lampiapi.TaskStatus.running">
 <span class="sig-name descname"><span class="pre">running</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'running'</span></em><a class="headerlink" href="#lampiapi.TaskStatus.running" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.TaskStatusNotRunning">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">TaskStatusNotRunning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskStatusNotRunning" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatusNotRunning.all">
+<span class="sig-name descname"><span class="pre">all</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'all'</span></em><a class="headerlink" href="#lampiapi.TaskStatusNotRunning.all" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatusNotRunning.completed">
+<span class="sig-name descname"><span class="pre">completed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'completed'</span></em><a class="headerlink" href="#lampiapi.TaskStatusNotRunning.completed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatusNotRunning.failed">
+<span class="sig-name descname"><span class="pre">failed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed'</span></em><a class="headerlink" href="#lampiapi.TaskStatusNotRunning.failed" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatusNotRunning.pending">
+<span class="sig-name descname"><span class="pre">pending</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending'</span></em><a class="headerlink" href="#lampiapi.TaskStatusNotRunning.pending" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
