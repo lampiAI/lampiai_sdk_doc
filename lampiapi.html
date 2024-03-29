@@ -1137,6 +1137,12 @@ Default is 3600 seconds (1 hour).</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.clear_all_tasks_for_all_users">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_all_tasks_for_all_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.clear_all_tasks_for_all_users" title="Link to this definition"></a></dt>
+<dd><p>Clears all tasks for all users.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.clear_task">
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.clear_task" title="Link to this definition"></a></dt>
 <dd><p>Clears a task.</p>
@@ -1176,6 +1182,17 @@ Default is 3600 seconds (1 hour).</p></li>
 <dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.delete_not_running_tasks">
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_not_running_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.delete_not_running_tasks" title="Link to this definition"></a></dt>
 <dd><p>Deletes a task that is not running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_keys</strong> (<em>str</em>) – A task key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager.delete_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager.delete_task" title="Link to this definition"></a></dt>
+<dd><p>Deletes a task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>task_keys</strong> (<em>str</em>) – A task key.</p>
@@ -2586,6 +2603,12 @@ Default is 3600 seconds (1 hour).</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.clear_all_tasks_for_all_users">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_all_tasks_for_all_users</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.clear_all_tasks_for_all_users" title="Link to this definition"></a></dt>
+<dd><p>Clears all tasks for all users.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.TaskManager.clear_task">
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">clear_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.clear_task" title="Link to this definition"></a></dt>
 <dd><p>Clears a task.</p>
@@ -2625,6 +2648,17 @@ Default is 3600 seconds (1 hour).</p></li>
 <dt class="sig sig-object py" id="lampiapi.TaskManager.delete_not_running_tasks">
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_not_running_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.delete_not_running_tasks" title="Link to this definition"></a></dt>
 <dd><p>Deletes a task that is not running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task_keys</strong> (<em>str</em>) – A task key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.TaskManager.delete_task">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager.delete_task" title="Link to this definition"></a></dt>
+<dd><p>Deletes a task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>task_keys</strong> (<em>str</em>) – A task key.</p>
