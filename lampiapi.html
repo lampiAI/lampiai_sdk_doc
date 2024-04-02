@@ -48,6 +48,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.lampiapi">lampiapi.lampiapi module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.lampiapi.LampiStatus"><code class="docutils literal notranslate"><span class="pre">LampiStatus</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.mylogger">lampiapi.mylogger module</a><ul>
@@ -81,6 +82,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-lampiapi">Module contents</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.LampiStatus"><code class="docutils literal notranslate"><span class="pre">LampiStatus</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.RemoteSSHClient"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.S3"><code class="docutils literal notranslate"><span class="pre">S3</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.ScaleWayAPI"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI</span></code></a></li>
@@ -481,6 +483,198 @@ If not provided, a default logger will be created.</p>
 </pre></div>
 </div>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.lampiapi.</span></span><span class="sig-name descname"><span class="pre">LampiStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.CREATE">
+<span class="sig-name descname"><span class="pre">CREATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Creating</span> <span class="pre">VM'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.CREATE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.CREATED">
+<span class="sig-name descname"><span class="pre">CREATED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'VM</span> <span class="pre">Created'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.CREATED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.CREATE_VM">
+<span class="sig-name descname"><span class="pre">CREATE_VM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Creating</span> <span class="pre">VM</span> <span class="pre">for</span> <span class="pre">transcripting'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.CREATE_VM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.DEPLOY">
+<span class="sig-name descname"><span class="pre">DEPLOY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Deploying</span> <span class="pre">services'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.DEPLOY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.DEPLOYED">
+<span class="sig-name descname"><span class="pre">DEPLOYED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Services</span> <span class="pre">Deployed'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.DEPLOYED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.END">
+<span class="sig-name descname"><span class="pre">END</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Ending'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.END" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.ERROR_DEPLOYING_VM">
+<span class="sig-name descname"><span class="pre">ERROR_DEPLOYING_VM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">deploying</span> <span class="pre">VM'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.ERROR_DEPLOYING_VM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.ERROR_DOWNLOAD_S3">
+<span class="sig-name descname"><span class="pre">ERROR_DOWNLOAD_S3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">downloading</span> <span class="pre">file</span> <span class="pre">from</span> <span class="pre">S3'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.ERROR_DOWNLOAD_S3" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.ERROR_TRANSCODING">
+<span class="sig-name descname"><span class="pre">ERROR_TRANSCODING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">local</span> <span class="pre">transcoding'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.ERROR_TRANSCODING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.ERROR_TRANSCODING_OR_TRANSCRIPTING">
+<span class="sig-name descname"><span class="pre">ERROR_TRANSCODING_OR_TRANSCRIPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">local</span> <span class="pre">transcripting</span> <span class="pre">or</span> <span class="pre">transcoding'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.ERROR_TRANSCODING_OR_TRANSCRIPTING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.ERROR_TRANSCRIPTING">
+<span class="sig-name descname"><span class="pre">ERROR_TRANSCRIPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">during</span> <span class="pre">transcripting'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.ERROR_TRANSCRIPTING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.FAILED_EMPTY_DOC">
+<span class="sig-name descname"><span class="pre">FAILED_EMPTY_DOC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed_empty_doc'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.FAILED_EMPTY_DOC" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.FAILED_TO_LOAD_DOC">
+<span class="sig-name descname"><span class="pre">FAILED_TO_LOAD_DOC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed_to_load_doc'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.FAILED_TO_LOAD_DOC" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.FINISHED">
+<span class="sig-name descname"><span class="pre">FINISHED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Done'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.FINISHED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.INIT">
+<span class="sig-name descname"><span class="pre">INIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Meeting</span> <span class="pre">initialization'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.INIT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.INSTALL">
+<span class="sig-name descname"><span class="pre">INSTALL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Installing</span> <span class="pre">system'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.INSTALL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.INSTALLED">
+<span class="sig-name descname"><span class="pre">INSTALLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'System</span> <span class="pre">Installed'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.INSTALLED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.INSTALLING_SYSTEM">
+<span class="sig-name descname"><span class="pre">INSTALLING_SYSTEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Installing</span> <span class="pre">system</span> <span class="pre">for</span> <span class="pre">transcripting'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.INSTALLING_SYSTEM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.PENDING">
+<span class="sig-name descname"><span class="pre">PENDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.PENDING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.RESERVE_S3">
+<span class="sig-name descname"><span class="pre">RESERVE_S3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'reserve_s3'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.RESERVE_S3" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.RUN_CNX">
+<span class="sig-name descname"><span class="pre">RUN_CNX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Connecting</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">call'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.RUN_CNX" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.RUN_INIT">
+<span class="sig-name descname"><span class="pre">RUN_INIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Running</span> <span class="pre">Browser</span> <span class="pre">container'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.RUN_INIT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.RUN_INIT_RECORD">
+<span class="sig-name descname"><span class="pre">RUN_INIT_RECORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Running</span> <span class="pre">meta</span> <span class="pre">record'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.RUN_INIT_RECORD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.RUN_RECORD">
+<span class="sig-name descname"><span class="pre">RUN_RECORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Recording</span> <span class="pre">the</span> <span class="pre">call'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.RUN_RECORD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.SEND">
+<span class="sig-name descname"><span class="pre">SEND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Sending</span> <span class="pre">Video'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.SEND" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.SENT">
+<span class="sig-name descname"><span class="pre">SENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Video</span> <span class="pre">ready</span> <span class="pre">to</span> <span class="pre">Transcript'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.SENT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.START">
+<span class="sig-name descname"><span class="pre">START</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Starting'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.START" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.STOP">
+<span class="sig-name descname"><span class="pre">STOP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Stopping</span> <span class="pre">the</span> <span class="pre">record'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.STOP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.TRAINED">
+<span class="sig-name descname"><span class="pre">TRAINED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'trained'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.TRAINED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.TRAINING">
+<span class="sig-name descname"><span class="pre">TRAINING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'training'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.TRAINING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.TRANSCODED">
+<span class="sig-name descname"><span class="pre">TRANSCODED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transcoded'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.TRANSCODED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.TRANSCODING">
+<span class="sig-name descname"><span class="pre">TRANSCODING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transcoding'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.TRANSCODING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.TRANSCRIPT">
+<span class="sig-name descname"><span class="pre">TRANSCRIPT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Running</span> <span class="pre">Transcript'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.TRANSCRIPT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.TRANSCRIPTED">
+<span class="sig-name descname"><span class="pre">TRANSCRIPTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transcripted'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.TRANSCRIPTED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.TRANSCRIPTING">
+<span class="sig-name descname"><span class="pre">TRANSCRIPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transcripting'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.TRANSCRIPTING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Unknown'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.UNKNOWN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiStatus.VISIO">
+<span class="sig-name descname"><span class="pre">VISIO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Visioconf</span> <span class="pre">started'</span></em><a class="headerlink" href="#lampiapi.lampiapi.LampiStatus.VISIO" title="Link to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -1973,6 +2167,198 @@ If not provided, a default logger will be created.</p>
 </pre></div>
 </div>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">LampiStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.LampiStatus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.CREATE">
+<span class="sig-name descname"><span class="pre">CREATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Creating</span> <span class="pre">VM'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.CREATE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.CREATED">
+<span class="sig-name descname"><span class="pre">CREATED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'VM</span> <span class="pre">Created'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.CREATED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.CREATE_VM">
+<span class="sig-name descname"><span class="pre">CREATE_VM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Creating</span> <span class="pre">VM</span> <span class="pre">for</span> <span class="pre">transcripting'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.CREATE_VM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.DEPLOY">
+<span class="sig-name descname"><span class="pre">DEPLOY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Deploying</span> <span class="pre">services'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.DEPLOY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.DEPLOYED">
+<span class="sig-name descname"><span class="pre">DEPLOYED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Services</span> <span class="pre">Deployed'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.DEPLOYED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.END">
+<span class="sig-name descname"><span class="pre">END</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Ending'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.END" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.ERROR_DEPLOYING_VM">
+<span class="sig-name descname"><span class="pre">ERROR_DEPLOYING_VM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">deploying</span> <span class="pre">VM'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.ERROR_DEPLOYING_VM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.ERROR_DOWNLOAD_S3">
+<span class="sig-name descname"><span class="pre">ERROR_DOWNLOAD_S3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">downloading</span> <span class="pre">file</span> <span class="pre">from</span> <span class="pre">S3'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.ERROR_DOWNLOAD_S3" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.ERROR_TRANSCODING">
+<span class="sig-name descname"><span class="pre">ERROR_TRANSCODING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">local</span> <span class="pre">transcoding'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.ERROR_TRANSCODING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.ERROR_TRANSCODING_OR_TRANSCRIPTING">
+<span class="sig-name descname"><span class="pre">ERROR_TRANSCODING_OR_TRANSCRIPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">local</span> <span class="pre">transcripting</span> <span class="pre">or</span> <span class="pre">transcoding'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.ERROR_TRANSCODING_OR_TRANSCRIPTING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.ERROR_TRANSCRIPTING">
+<span class="sig-name descname"><span class="pre">ERROR_TRANSCRIPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Error</span> <span class="pre">during</span> <span class="pre">transcripting'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.ERROR_TRANSCRIPTING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.FAILED_EMPTY_DOC">
+<span class="sig-name descname"><span class="pre">FAILED_EMPTY_DOC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed_empty_doc'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.FAILED_EMPTY_DOC" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.FAILED_TO_LOAD_DOC">
+<span class="sig-name descname"><span class="pre">FAILED_TO_LOAD_DOC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed_to_load_doc'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.FAILED_TO_LOAD_DOC" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.FINISHED">
+<span class="sig-name descname"><span class="pre">FINISHED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Done'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.FINISHED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.INIT">
+<span class="sig-name descname"><span class="pre">INIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Meeting</span> <span class="pre">initialization'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.INIT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.INSTALL">
+<span class="sig-name descname"><span class="pre">INSTALL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Installing</span> <span class="pre">system'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.INSTALL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.INSTALLED">
+<span class="sig-name descname"><span class="pre">INSTALLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'System</span> <span class="pre">Installed'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.INSTALLED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.INSTALLING_SYSTEM">
+<span class="sig-name descname"><span class="pre">INSTALLING_SYSTEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Installing</span> <span class="pre">system</span> <span class="pre">for</span> <span class="pre">transcripting'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.INSTALLING_SYSTEM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.PENDING">
+<span class="sig-name descname"><span class="pre">PENDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.PENDING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.RESERVE_S3">
+<span class="sig-name descname"><span class="pre">RESERVE_S3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'reserve_s3'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.RESERVE_S3" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.RUN_CNX">
+<span class="sig-name descname"><span class="pre">RUN_CNX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Connecting</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">call'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.RUN_CNX" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.RUN_INIT">
+<span class="sig-name descname"><span class="pre">RUN_INIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Running</span> <span class="pre">Browser</span> <span class="pre">container'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.RUN_INIT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.RUN_INIT_RECORD">
+<span class="sig-name descname"><span class="pre">RUN_INIT_RECORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Running</span> <span class="pre">meta</span> <span class="pre">record'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.RUN_INIT_RECORD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.RUN_RECORD">
+<span class="sig-name descname"><span class="pre">RUN_RECORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Recording</span> <span class="pre">the</span> <span class="pre">call'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.RUN_RECORD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.SEND">
+<span class="sig-name descname"><span class="pre">SEND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Sending</span> <span class="pre">Video'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.SEND" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.SENT">
+<span class="sig-name descname"><span class="pre">SENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Video</span> <span class="pre">ready</span> <span class="pre">to</span> <span class="pre">Transcript'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.SENT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.START">
+<span class="sig-name descname"><span class="pre">START</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Starting'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.START" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.STOP">
+<span class="sig-name descname"><span class="pre">STOP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Stopping</span> <span class="pre">the</span> <span class="pre">record'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.STOP" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.TRAINED">
+<span class="sig-name descname"><span class="pre">TRAINED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'trained'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.TRAINED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.TRAINING">
+<span class="sig-name descname"><span class="pre">TRAINING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'training'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.TRAINING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.TRANSCODED">
+<span class="sig-name descname"><span class="pre">TRANSCODED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transcoded'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.TRANSCODED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.TRANSCODING">
+<span class="sig-name descname"><span class="pre">TRANSCODING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transcoding'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.TRANSCODING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.TRANSCRIPT">
+<span class="sig-name descname"><span class="pre">TRANSCRIPT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Running</span> <span class="pre">Transcript'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.TRANSCRIPT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.TRANSCRIPTED">
+<span class="sig-name descname"><span class="pre">TRANSCRIPTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transcripted'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.TRANSCRIPTED" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.TRANSCRIPTING">
+<span class="sig-name descname"><span class="pre">TRANSCRIPTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transcripting'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.TRANSCRIPTING" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Unknown'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.UNKNOWN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiStatus.VISIO">
+<span class="sig-name descname"><span class="pre">VISIO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Visioconf</span> <span class="pre">started'</span></em><a class="headerlink" href="#lampiapi.LampiStatus.VISIO" title="Link to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
