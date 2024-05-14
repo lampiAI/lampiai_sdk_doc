@@ -1027,7 +1027,7 @@ Default is 3600 seconds (1 hour).</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.s3.S3.put_file_blob">
-<span class="sig-name descname"><span class="pre">put_file_blob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.s3.S3.put_file_blob" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">put_file_blob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public_acl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.s3.S3.put_file_blob" title="Link to this definition"></a></dt>
 <dd><p>Upload a file to an Amazon S3 bucket.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1035,6 +1035,7 @@ Default is 3600 seconds (1 hour).</p></li>
 <li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
 <li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be uploaded to the bucket.</p></li>
 <li><p><strong>file_blob</strong> (<em>str</em>) – The file blob to be uploaded.</p></li>
+<li><p><strong>public_acl</strong> (<em>bool</em>) – Whether to make the uploaded file publicly accessible.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1047,6 +1048,7 @@ Default is 3600 seconds (1 hour).</p></li>
     <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
     <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
     <span class="n">file_blob</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+    <span class="n">public_acl</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -2708,7 +2710,7 @@ Default is 3600 seconds (1 hour).</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.S3.put_file_blob">
-<span class="sig-name descname"><span class="pre">put_file_blob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.S3.put_file_blob" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">put_file_blob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_blob</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">public_acl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.S3.put_file_blob" title="Link to this definition"></a></dt>
 <dd><p>Upload a file to an Amazon S3 bucket.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -2716,6 +2718,7 @@ Default is 3600 seconds (1 hour).</p></li>
 <li><p><strong>bucket_name</strong> (<em>str</em>) – The name of the S3 bucket.</p></li>
 <li><p><strong>object_name</strong> (<em>str</em>) – The name of the object (file) to be uploaded to the bucket.</p></li>
 <li><p><strong>file_blob</strong> (<em>str</em>) – The file blob to be uploaded.</p></li>
+<li><p><strong>public_acl</strong> (<em>bool</em>) – Whether to make the uploaded file publicly accessible.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -2728,6 +2731,7 @@ Default is 3600 seconds (1 hour).</p></li>
     <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
     <span class="n">object_name</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
     <span class="n">file_blob</span><span class="o">=</span><span class="s2">&quot;example.pdf&quot;</span><span class="p">,</span>
+    <span class="n">public_acl</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
