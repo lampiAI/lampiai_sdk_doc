@@ -52,6 +52,14 @@ lampiapi.task\_manager module
    :undoc-members:
    :show-inheritance:
 
+lampiapi.toolinghelper module
+-----------------------------
+
+.. automodule:: lampiapi.toolinghelper
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 lampiapi.transcript\_api module
 -------------------------------
 
