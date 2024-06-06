@@ -472,6 +472,58 @@ If not provided, a default logger will be created.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.image_to_text">
+<span class="sig-name descname"><span class="pre">image_to_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.image_to_text" title="Link to this definition"></a></dt>
+<dd><p>Convert an image to text via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>files</strong> (<em>dict</em>) – The image to convert.</p></li>
+<li><p><strong>user_id</strong> (<em>int</em>) – The ID of the user.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The response.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Convert an image to text via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">directory_path</span><span class="si">}</span><span class="s2">/screenshot_resized/screenshot_</span><span class="si">{</span><span class="n">speaker</span><span class="si">}</span><span class="s2">.png&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="s2">&quot;image/jpeg&quot;</span><span class="p">)}</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">image_to_text</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.list_all_users_with_providers">
+<span class="sig-name descname"><span class="pre">list_all_users_with_providers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.list_all_users_with_providers" title="Link to this definition"></a></dt>
+<dd><p>List all users with providers via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The JSON data from the response.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># List all users with providers via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">users_with_providers</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_all_users_with_providers</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">users_with_providers</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.trigger_task">
 <span class="sig-name descname"><span class="pre">trigger_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.trigger_task" title="Link to this definition"></a></dt>
 <dd><p>Trigger a task via the Lampi API.</p>
@@ -2617,6 +2669,58 @@ If not provided, a default logger will be created.</p>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File hash: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">stored_hash</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to get file hash.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.image_to_text">
+<span class="sig-name descname"><span class="pre">image_to_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.LampiAPI.image_to_text" title="Link to this definition"></a></dt>
+<dd><p>Convert an image to text via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>files</strong> (<em>dict</em>) – The image to convert.</p></li>
+<li><p><strong>user_id</strong> (<em>int</em>) – The ID of the user.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The response.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># Convert an image to text via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">directory_path</span><span class="si">}</span><span class="s2">/screenshot_resized/screenshot_</span><span class="si">{</span><span class="n">speaker</span><span class="si">}</span><span class="s2">.png&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="s2">&quot;image/jpeg&quot;</span><span class="p">)}</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">image_to_text</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.list_all_users_with_providers">
+<span class="sig-name descname"><span class="pre">list_all_users_with_providers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.list_all_users_with_providers" title="Link to this definition"></a></dt>
+<dd><p>List all users with providers via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The JSON data from the response.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># List all users with providers via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">users_with_providers</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_all_users_with_providers</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">users_with_providers</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
