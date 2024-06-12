@@ -221,13 +221,13 @@ If not provided, a default logger will be created.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.create_document_to_sync">
-<span class="sig-name descname"><span class="pre">create_document_to_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">virtual_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.create_document_to_sync" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">create_document_to_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">virtual_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.create_document_to_sync" title="Link to this definition"></a></dt>
 <dd><p>Create a document to sync via the Lampi API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the document.</p></li>
-<li><p><strong>organization_id</strong> (<em>int</em>) – The ID of the organization.</p></li>
+<li><p><strong>user_id</strong> (<em>int</em>) – The ID of the user.</p></li>
 <li><p><strong>size</strong> (<em>int</em>) – The size of the document.</p></li>
 <li><p><strong>file_type</strong> (<em>str</em>) – The file type of the document.</p></li>
 <li><p><strong>connectors</strong> (<em>str</em>) – The connectors of the document.</p></li>
@@ -245,14 +245,14 @@ If not provided, a default logger will be created.</p>
 <p class="rubric">Example</p>
 <p># Create a document to sync via the Lampi API:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;example_document.txt&quot;</span>
-<span class="n">organization_id</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="mi">123</span>
 <span class="n">size</span> <span class="o">=</span> <span class="mi">1024</span>
 <span class="n">file_type</span> <span class="o">=</span> <span class="s2">&quot;txt&quot;</span>
 <span class="n">connectors</span> <span class="o">=</span> <span class="s2">&quot;files&quot;</span>
 <span class="n">virtual_path</span> <span class="o">=</span> <span class="s2">&quot;example_folder&quot;</span>
 <span class="n">file_hash</span> <span class="o">=</span> <span class="s2">&quot;qsdjslqdjlsqd&quot;</span>
 <span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
-<span class="n">document_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_document_to_sync</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">connectors</span><span class="p">,</span> <span class="n">virtual_path</span><span class="p">,</span> <span class="n">file_hash</span><span class="p">)</span>
+<span class="n">document_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_document_to_sync</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">connectors</span><span class="p">,</span> <span class="n">virtual_path</span><span class="p">,</span> <span class="n">file_hash</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">document_result</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document </span><span class="si">%s</span><span class="s2"> created successfully&quot;</span> <span class="o">%</span> <span class="n">document_result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
@@ -519,6 +519,35 @@ If not provided, a default logger will be created.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
 <span class="n">users_with_providers</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_all_users_with_providers</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">users_with_providers</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.list_single_user_with_provider">
+<span class="sig-name descname"><span class="pre">list_single_user_with_provider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.list_single_user_with_provider" title="Link to this definition"></a></dt>
+<dd><p>List a single user with a provider via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_id</strong> (<em>int</em>) – The ID of the user.</p></li>
+<li><p><strong>provider</strong> (<em>str</em>) – The provider of the user.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># List a single user with a provider via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user_id</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">provider</span> <span class="o">=</span> <span class="s2">&quot;google&quot;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">user_with_provider</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_single_user_with_provider</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">provider</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user_with_provider</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2423,13 +2452,13 @@ If not provided, a default logger will be created.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.LampiAPI.create_document_to_sync">
-<span class="sig-name descname"><span class="pre">create_document_to_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organization_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">virtual_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.create_document_to_sync" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">create_document_to_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">virtual_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.create_document_to_sync" title="Link to this definition"></a></dt>
 <dd><p>Create a document to sync via the Lampi API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the document.</p></li>
-<li><p><strong>organization_id</strong> (<em>int</em>) – The ID of the organization.</p></li>
+<li><p><strong>user_id</strong> (<em>int</em>) – The ID of the user.</p></li>
 <li><p><strong>size</strong> (<em>int</em>) – The size of the document.</p></li>
 <li><p><strong>file_type</strong> (<em>str</em>) – The file type of the document.</p></li>
 <li><p><strong>connectors</strong> (<em>str</em>) – The connectors of the document.</p></li>
@@ -2447,14 +2476,14 @@ If not provided, a default logger will be created.</p>
 <p class="rubric">Example</p>
 <p># Create a document to sync via the Lampi API:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;example_document.txt&quot;</span>
-<span class="n">organization_id</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="mi">123</span>
 <span class="n">size</span> <span class="o">=</span> <span class="mi">1024</span>
 <span class="n">file_type</span> <span class="o">=</span> <span class="s2">&quot;txt&quot;</span>
 <span class="n">connectors</span> <span class="o">=</span> <span class="s2">&quot;files&quot;</span>
 <span class="n">virtual_path</span> <span class="o">=</span> <span class="s2">&quot;example_folder&quot;</span>
 <span class="n">file_hash</span> <span class="o">=</span> <span class="s2">&quot;qsdjslqdjlsqd&quot;</span>
 <span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
-<span class="n">document_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_document_to_sync</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">connectors</span><span class="p">,</span> <span class="n">virtual_path</span><span class="p">,</span> <span class="n">file_hash</span><span class="p">)</span>
+<span class="n">document_result</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">create_document_to_sync</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">connectors</span><span class="p">,</span> <span class="n">virtual_path</span><span class="p">,</span> <span class="n">file_hash</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">document_result</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document </span><span class="si">%s</span><span class="s2"> created successfully&quot;</span> <span class="o">%</span> <span class="n">document_result</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
@@ -2721,6 +2750,35 @@ If not provided, a default logger will be created.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
 <span class="n">users_with_providers</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_all_users_with_providers</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">users_with_providers</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.list_single_user_with_provider">
+<span class="sig-name descname"><span class="pre">list_single_user_with_provider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">provider</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.list_single_user_with_provider" title="Link to this definition"></a></dt>
+<dd><p>List a single user with a provider via the Lampi API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_id</strong> (<em>int</em>) – The ID of the user.</p></li>
+<li><p><strong>provider</strong> (<em>str</em>) – The provider of the user.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The JSON data from the response.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p># List a single user with a provider via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user_id</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="n">provider</span> <span class="o">=</span> <span class="s2">&quot;google&quot;</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">user_with_provider</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">list_single_user_with_provider</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">provider</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user_with_provider</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
