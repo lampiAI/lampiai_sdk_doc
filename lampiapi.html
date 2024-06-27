@@ -46,6 +46,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">lampiapi</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">lampiapi package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.agentinghelper">lampiapi.agentinghelper module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingHelper"><code class="docutils literal notranslate"><span class="pre">AgentingHelper</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate"><code class="docutils literal notranslate"><span class="pre">AgentingTemplate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.agentinghelper.KeywordsTemplate"><code class="docutils literal notranslate"><span class="pre">KeywordsTemplate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.agentinghelper.Question"><code class="docutils literal notranslate"><span class="pre">Question</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.agentinghelper.Template"><code class="docutils literal notranslate"><span class="pre">Template</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.agentinghelper.Topic"><code class="docutils literal notranslate"><span class="pre">Topic</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.lampiapi">lampiapi.lampiapi module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.lampiapi.LampiStatus"><code class="docutils literal notranslate"><span class="pre">LampiStatus</span></code></a></li>
@@ -75,21 +84,14 @@
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.task_manager.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.toolinghelper">lampiapi.toolinghelper module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#lampiapi.toolinghelper.KeywordsTemplate"><code class="docutils literal notranslate"><span class="pre">KeywordsTemplate</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lampiapi.toolinghelper.Question"><code class="docutils literal notranslate"><span class="pre">Question</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lampiapi.toolinghelper.Template"><code class="docutils literal notranslate"><span class="pre">Template</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingHelper"><code class="docutils literal notranslate"><span class="pre">ToolingHelper</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lampiapi.toolinghelper.Topic"><code class="docutils literal notranslate"><span class="pre">Topic</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-lampiapi.transcript_api">lampiapi.transcript_api module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.transcript_api.TranscriptAPI"><code class="docutils literal notranslate"><span class="pre">TranscriptAPI</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.transcript_api.detect_language"><code class="docutils literal notranslate"><span class="pre">detect_language()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-lampiapi">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.AgentingHelper"><code class="docutils literal notranslate"><span class="pre">AgentingHelper</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lampiapi.AgentingTemplate"><code class="docutils literal notranslate"><span class="pre">AgentingTemplate</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.KeywordsTemplate"><code class="docutils literal notranslate"><span class="pre">KeywordsTemplate</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.LampiStatus"><code class="docutils literal notranslate"><span class="pre">LampiStatus</span></code></a></li>
@@ -101,8 +103,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskModel"><code class="docutils literal notranslate"><span class="pre">TaskModel</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskStatus"><code class="docutils literal notranslate"><span class="pre">TaskStatus</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.TaskStatusNotRunning"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lampiapi.ToolingHelper"><code class="docutils literal notranslate"><span class="pre">ToolingHelper</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lampiapi.ToolingTemplate"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.Topic"><code class="docutils literal notranslate"><span class="pre">Topic</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lampiapi.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a></li>
 </ul>
@@ -142,6 +142,366 @@
 <h1>lampiapi package<a class="headerlink" href="#lampiapi-package" title="Link to this heading"></a></h1>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-lampiapi.agentinghelper">
+<span id="lampiapi-agentinghelper-module"></span><h2>lampiapi.agentinghelper module<a class="headerlink" href="#module-lampiapi.agentinghelper" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.agentinghelper.</span></span><span class="sig-name descname"><span class="pre">AgentingHelper</span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A helper class for various utility functions related to tooling templates.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.add_keywords">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.add_keywords" title="Link to this definition"></a></dt>
+<dd><p>Adds keywords to a AgentingTemplate object by checking for keywords and updating the keywords property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><em>AgentingTemplate</em></a>) – The AgentingTemplate object to add keywords to.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple indicating whether keywords were added and the updated AgentingTemplate object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[bool, <a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate">AgentingTemplate</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.check_keyword">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_keyword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.check_keyword" title="Link to this definition"></a></dt>
+<dd><p>Checks for keywords in a AgentingTemplate object by analyzing its properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><em>AgentingTemplate</em></a>) – The AgentingTemplate object to check for keywords.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of keywords found in the AgentingTemplate object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.extend_questions">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extend_questions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">questions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Question" title="lampiapi.agentinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.extend_questions" title="Link to this definition"></a></dt>
+<dd><p>Extends the questions property of a topic in a AgentingTemplate object with additional questions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_data</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><em>Topic</em></a><em>]</em>) – The list of topics in the AgentingTemplate object.</p></li>
+<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic to extend questions for.</p></li>
+<li><p><strong>questions</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.agentinghelper.Question" title="lampiapi.agentinghelper.Question"><em>Question</em></a><em>]</em>) – The additional questions to add to the topic.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.find_topic_by_name">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_topic_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.find_topic_by_name" title="Link to this definition"></a></dt>
+<dd><p>Finds a topic in a list of topics by its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_data</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><em>Topic</em></a><em>]</em>) – The list of topics to search in.</p></li>
+<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic to find.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The found topic, or None if not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic">Topic</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.fix_apps">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fix_apps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.fix_apps" title="Link to this definition"></a></dt>
+<dd><p>Fixes the apps property of questions in a AgentingTemplate object by removing invalid apps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><em>AgentingTemplate</em></a>) – The AgentingTemplate object to fix the apps property.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The updated AgentingTemplate object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate">AgentingTemplate</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.sanitize_and_format_string">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_format_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.KeywordsTemplate" title="lampiapi.agentinghelper.KeywordsTemplate"><span class="pre">KeywordsTemplate</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.sanitize_and_format_string" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes and formats a string by replacing placeholders with values from a keywords template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> (<em>str</em>) – The string to sanitize and format.</p></li>
+<li><p><strong>keywords_template</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.agentinghelper.KeywordsTemplate" title="lampiapi.agentinghelper.KeywordsTemplate"><em>KeywordsTemplate</em></a><em>]</em>) – The keywords template containing keyword-value pairs.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description value to replace in the string.</p></li>
+<li><p><strong>language</strong> (<em>str</em>) – The language value to replace in the string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sanitized and formatted string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.sanitize_and_format_topic_content">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_format_topic_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.KeywordsTemplate" title="lampiapi.agentinghelper.KeywordsTemplate"><span class="pre">KeywordsTemplate</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.sanitize_and_format_topic_content" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes and formats the content of a topic by replacing placeholders with values from a keywords template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<em>str</em>) – The content to sanitize and format.</p></li>
+<li><p><strong>format_dict</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.agentinghelper.KeywordsTemplate" title="lampiapi.agentinghelper.KeywordsTemplate"><em>KeywordsTemplate</em></a><em>]</em>) – The keywords template containing keyword-value pairs.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description value to replace in the content.</p></li>
+<li><p><strong>language</strong> (<em>str</em>) – The language value to replace in the content.</p></li>
+<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>HTTPException</strong> – If an error occurs while sanitizing and formatting the content.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.sanitize_and_match">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.sanitize_and_match" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes a string and finds all matches of patterns enclosed in double curly braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize and match.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of matches found in the string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.sanitize_str">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.sanitize_str" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes a string by replacing double curly braces with placeholders and single curly braces with double curly braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sanitized string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.sanitize_str_to_single_bracket">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_str_to_single_bracket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.sanitize_str_to_single_bracket" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes a string by replacing double curly braces with placeholders and single curly braces with double curly braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sanitized string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.sanity_check">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanity_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.sanity_check" title="Link to this definition"></a></dt>
+<dd><p>Performs a sanity check on a AgentingTemplate object by validating its properties and formatting its content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><em>AgentingTemplate</em></a>) – The AgentingTemplate object to perform the sanity check on.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the sanity check passes, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.unique_entries_list">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unique_entries_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qlist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.unique_entries_list" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of unique entries from a given list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>qlist</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The list to get unique entries from.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of unique entries.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.validate_json_schema">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_json_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.validate_json_schema" title="Link to this definition"></a></dt>
+<dd><p>Validates a JSON object against a JSON schema.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> – The JSON object to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>HTTPException</strong> – If the JSON object is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingHelper.validate_question_app">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_question_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingHelper.validate_question_app" title="Link to this definition"></a></dt>
+<dd><p>Validates the apps property of a question by checking if the apps are valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic.</p></li>
+<li><p><strong>content</strong> (<em>str</em>) – The content of the question.</p></li>
+<li><p><strong>apps</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The apps to validate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>HTTPException</strong> – If the apps are not valid for the question.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingTemplate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.agentinghelper.</span></span><span class="sig-name descname"><span class="pre">AgentingTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">masterprompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'English'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.agentinghelper.AgentingTemplate" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingTemplate.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.agentinghelper.AgentingTemplate.description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingTemplate.keywords">
+<span class="sig-name descname"><span class="pre">keywords</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.agentinghelper.AgentingTemplate.keywords" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingTemplate.language">
+<span class="sig-name descname"><span class="pre">language</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.agentinghelper.AgentingTemplate.language" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingTemplate.masterprompt">
+<span class="sig-name descname"><span class="pre">masterprompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.agentinghelper.AgentingTemplate.masterprompt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.AgentingTemplate.topics">
+<span class="sig-name descname"><span class="pre">topics</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.agentinghelper.AgentingTemplate.topics" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.KeywordsTemplate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.agentinghelper.</span></span><span class="sig-name descname"><span class="pre">KeywordsTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.agentinghelper.KeywordsTemplate" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.KeywordsTemplate.keyword">
+<span class="sig-name descname"><span class="pre">keyword</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.agentinghelper.KeywordsTemplate.keyword" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.KeywordsTemplate.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.agentinghelper.KeywordsTemplate.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Question">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.agentinghelper.</span></span><span class="sig-name descname"><span class="pre">Question</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.agentinghelper.Question" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Question.apps">
+<span class="sig-name descname"><span class="pre">apps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.agentinghelper.Question.apps" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Question.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.agentinghelper.Question.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Question.question">
+<span class="sig-name descname"><span class="pre">question</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.agentinghelper.Question.question" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Question.validate_apps">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_apps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.agentinghelper.Question.validate_apps" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Template">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.agentinghelper.</span></span><span class="sig-name descname"><span class="pre">Template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.agentinghelper.Template" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Template.system_prompt">
+<span class="sig-name descname"><span class="pre">system_prompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#lampiapi.agentinghelper.Template.system_prompt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Topic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.agentinghelper.</span></span><span class="sig-name descname"><span class="pre">Topic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">questions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Question" title="lampiapi.agentinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condensateprompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.agentinghelper.Topic" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Topic.condensateprompt">
+<span class="sig-name descname"><span class="pre">condensateprompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.agentinghelper.Topic.condensateprompt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Topic.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.agentinghelper.Topic.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.agentinghelper.Topic.questions">
+<span class="sig-name descname"><span class="pre">questions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Question" title="lampiapi.agentinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.agentinghelper.Topic.questions" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-lampiapi.lampiapi">
 <span id="lampiapi-lampiapi-module"></span><h2>lampiapi.lampiapi module<a class="headerlink" href="#module-lampiapi.lampiapi" title="Link to this heading"></a></h2>
@@ -1896,366 +2256,6 @@ Default is 3600 seconds (1 hour).</p></li>
 </dd></dl>
 
 </section>
-<section id="module-lampiapi.toolinghelper">
-<span id="lampiapi-toolinghelper-module"></span><h2>lampiapi.toolinghelper module<a class="headerlink" href="#module-lampiapi.toolinghelper" title="Link to this heading"></a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.KeywordsTemplate">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.toolinghelper.</span></span><span class="sig-name descname"><span class="pre">KeywordsTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.toolinghelper.KeywordsTemplate" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.KeywordsTemplate.keyword">
-<span class="sig-name descname"><span class="pre">keyword</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.toolinghelper.KeywordsTemplate.keyword" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.KeywordsTemplate.value">
-<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.toolinghelper.KeywordsTemplate.value" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Question">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.toolinghelper.</span></span><span class="sig-name descname"><span class="pre">Question</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.toolinghelper.Question" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Question.apps">
-<span class="sig-name descname"><span class="pre">apps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.toolinghelper.Question.apps" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Question.id">
-<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.toolinghelper.Question.id" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Question.question">
-<span class="sig-name descname"><span class="pre">question</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.toolinghelper.Question.question" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Question.validate_apps">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_apps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.toolinghelper.Question.validate_apps" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Template">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.toolinghelper.</span></span><span class="sig-name descname"><span class="pre">Template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.toolinghelper.Template" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Template.system_prompt">
-<span class="sig-name descname"><span class="pre">system_prompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#lampiapi.toolinghelper.Template.system_prompt" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.toolinghelper.</span></span><span class="sig-name descname"><span class="pre">ToolingHelper</span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A helper class for various utility functions related to tooling templates.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.add_keywords">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.add_keywords" title="Link to this definition"></a></dt>
-<dd><p>Adds keywords to a ToolingTemplate object by checking for keywords and updating the keywords property.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><em>ToolingTemplate</em></a>) – The ToolingTemplate object to add keywords to.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A tuple indicating whether keywords were added and the updated ToolingTemplate object.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Tuple[bool, <a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate">ToolingTemplate</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.check_keyword">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_keyword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.check_keyword" title="Link to this definition"></a></dt>
-<dd><p>Checks for keywords in a ToolingTemplate object by analyzing its properties.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><em>ToolingTemplate</em></a>) – The ToolingTemplate object to check for keywords.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A list of keywords found in the ToolingTemplate object.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.extend_questions">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extend_questions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">questions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Question" title="lampiapi.toolinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.extend_questions" title="Link to this definition"></a></dt>
-<dd><p>Extends the questions property of a topic in a ToolingTemplate object with additional questions.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>json_data</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><em>Topic</em></a><em>]</em>) – The list of topics in the ToolingTemplate object.</p></li>
-<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic to extend questions for.</p></li>
-<li><p><strong>questions</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.toolinghelper.Question" title="lampiapi.toolinghelper.Question"><em>Question</em></a><em>]</em>) – The additional questions to add to the topic.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.find_topic_by_name">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_topic_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.find_topic_by_name" title="Link to this definition"></a></dt>
-<dd><p>Finds a topic in a list of topics by its name.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>json_data</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><em>Topic</em></a><em>]</em>) – The list of topics to search in.</p></li>
-<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic to find.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The found topic, or None if not found.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic">Topic</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.fix_apps">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fix_apps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.fix_apps" title="Link to this definition"></a></dt>
-<dd><p>Fixes the apps property of questions in a ToolingTemplate object by removing invalid apps.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><em>ToolingTemplate</em></a>) – The ToolingTemplate object to fix the apps property.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The updated ToolingTemplate object.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate">ToolingTemplate</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.sanitize_and_format_string">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_format_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.KeywordsTemplate" title="lampiapi.toolinghelper.KeywordsTemplate"><span class="pre">KeywordsTemplate</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.sanitize_and_format_string" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes and formats a string by replacing placeholders with values from a keywords template.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>string</strong> (<em>str</em>) – The string to sanitize and format.</p></li>
-<li><p><strong>keywords_template</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.toolinghelper.KeywordsTemplate" title="lampiapi.toolinghelper.KeywordsTemplate"><em>KeywordsTemplate</em></a><em>]</em>) – The keywords template containing keyword-value pairs.</p></li>
-<li><p><strong>description</strong> (<em>str</em>) – The description value to replace in the string.</p></li>
-<li><p><strong>language</strong> (<em>str</em>) – The language value to replace in the string.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sanitized and formatted string.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.sanitize_and_format_topic_content">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_format_topic_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.KeywordsTemplate" title="lampiapi.toolinghelper.KeywordsTemplate"><span class="pre">KeywordsTemplate</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.sanitize_and_format_topic_content" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes and formats the content of a topic by replacing placeholders with values from a keywords template.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>content</strong> (<em>str</em>) – The content to sanitize and format.</p></li>
-<li><p><strong>format_dict</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.toolinghelper.KeywordsTemplate" title="lampiapi.toolinghelper.KeywordsTemplate"><em>KeywordsTemplate</em></a><em>]</em>) – The keywords template containing keyword-value pairs.</p></li>
-<li><p><strong>description</strong> (<em>str</em>) – The description value to replace in the content.</p></li>
-<li><p><strong>language</strong> (<em>str</em>) – The language value to replace in the content.</p></li>
-<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>HTTPException</strong> – If an error occurs while sanitizing and formatting the content.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.sanitize_and_match">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.sanitize_and_match" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes a string and finds all matches of patterns enclosed in double curly braces.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize and match.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A list of matches found in the string.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.sanitize_str">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.sanitize_str" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes a string by replacing double curly braces with placeholders and single curly braces with double curly braces.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sanitized string.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.sanitize_str_to_single_bracket">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_str_to_single_bracket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.sanitize_str_to_single_bracket" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes a string by replacing double curly braces with placeholders and single curly braces with double curly braces.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sanitized string.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.sanity_check">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanity_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.sanity_check" title="Link to this definition"></a></dt>
-<dd><p>Performs a sanity check on a ToolingTemplate object by validating its properties and formatting its content.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><em>ToolingTemplate</em></a>) – The ToolingTemplate object to perform the sanity check on.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>True if the sanity check passes, False otherwise.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.unique_entries_list">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unique_entries_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qlist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.unique_entries_list" title="Link to this definition"></a></dt>
-<dd><p>Returns a list of unique entries from a given list.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>qlist</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The list to get unique entries from.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A list of unique entries.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.validate_json_schema">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_json_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.validate_json_schema" title="Link to this definition"></a></dt>
-<dd><p>Validates a JSON object against a JSON schema.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> – The JSON object to validate.</p>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>HTTPException</strong> – If the JSON object is invalid.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingHelper.validate_question_app">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_question_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingHelper.validate_question_app" title="Link to this definition"></a></dt>
-<dd><p>Validates the apps property of a question by checking if the apps are valid.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic.</p></li>
-<li><p><strong>content</strong> (<em>str</em>) – The content of the question.</p></li>
-<li><p><strong>apps</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The apps to validate.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>HTTPException</strong> – If the apps are not valid for the question.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingTemplate">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.toolinghelper.</span></span><span class="sig-name descname"><span class="pre">ToolingTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">masterprompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'English'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.toolinghelper.ToolingTemplate" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingTemplate.description">
-<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.toolinghelper.ToolingTemplate.description" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingTemplate.keywords">
-<span class="sig-name descname"><span class="pre">keywords</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.toolinghelper.ToolingTemplate.keywords" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingTemplate.language">
-<span class="sig-name descname"><span class="pre">language</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.toolinghelper.ToolingTemplate.language" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingTemplate.masterprompt">
-<span class="sig-name descname"><span class="pre">masterprompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.toolinghelper.ToolingTemplate.masterprompt" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.ToolingTemplate.topics">
-<span class="sig-name descname"><span class="pre">topics</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.toolinghelper.ToolingTemplate.topics" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Topic">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.toolinghelper.</span></span><span class="sig-name descname"><span class="pre">Topic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">questions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Question" title="lampiapi.toolinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condensateprompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.toolinghelper.Topic" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Topic.condensateprompt">
-<span class="sig-name descname"><span class="pre">condensateprompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.toolinghelper.Topic.condensateprompt" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Topic.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.toolinghelper.Topic.name" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.toolinghelper.Topic.questions">
-<span class="sig-name descname"><span class="pre">questions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Question" title="lampiapi.toolinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.toolinghelper.Topic.questions" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</section>
 <section id="module-lampiapi.transcript_api">
 <span id="lampiapi-transcript-api-module"></span><h2>lampiapi.transcript_api module<a class="headerlink" href="#module-lampiapi.transcript_api" title="Link to this heading"></a></h2>
 <dl class="py class">
@@ -2365,6 +2365,289 @@ Default is None.</p>
 </section>
 <section id="module-lampiapi">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-lampiapi" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">AgentingHelper</span></span><a class="headerlink" href="#lampiapi.AgentingHelper" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A helper class for various utility functions related to tooling templates.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.add_keywords">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.add_keywords" title="Link to this definition"></a></dt>
+<dd><p>Adds keywords to a AgentingTemplate object by checking for keywords and updating the keywords property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.AgentingTemplate" title="lampiapi.AgentingTemplate"><em>AgentingTemplate</em></a>) – The AgentingTemplate object to add keywords to.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple indicating whether keywords were added and the updated AgentingTemplate object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[bool, <a class="reference internal" href="#lampiapi.AgentingTemplate" title="lampiapi.AgentingTemplate">AgentingTemplate</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.check_keyword">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_keyword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.check_keyword" title="Link to this definition"></a></dt>
+<dd><p>Checks for keywords in a AgentingTemplate object by analyzing its properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.AgentingTemplate" title="lampiapi.AgentingTemplate"><em>AgentingTemplate</em></a>) – The AgentingTemplate object to check for keywords.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of keywords found in the AgentingTemplate object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.extend_questions">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extend_questions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">questions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Question" title="lampiapi.agentinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.AgentingHelper.extend_questions" title="Link to this definition"></a></dt>
+<dd><p>Extends the questions property of a topic in a AgentingTemplate object with additional questions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_data</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.Topic" title="lampiapi.Topic"><em>Topic</em></a><em>]</em>) – The list of topics in the AgentingTemplate object.</p></li>
+<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic to extend questions for.</p></li>
+<li><p><strong>questions</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.Question" title="lampiapi.Question"><em>Question</em></a><em>]</em>) – The additional questions to add to the topic.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.find_topic_by_name">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_topic_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.find_topic_by_name" title="Link to this definition"></a></dt>
+<dd><p>Finds a topic in a list of topics by its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_data</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.Topic" title="lampiapi.Topic"><em>Topic</em></a><em>]</em>) – The list of topics to search in.</p></li>
+<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic to find.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The found topic, or None if not found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.Topic" title="lampiapi.Topic">Topic</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.fix_apps">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fix_apps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.fix_apps" title="Link to this definition"></a></dt>
+<dd><p>Fixes the apps property of questions in a AgentingTemplate object by removing invalid apps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.AgentingTemplate" title="lampiapi.AgentingTemplate"><em>AgentingTemplate</em></a>) – The AgentingTemplate object to fix the apps property.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The updated AgentingTemplate object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.AgentingTemplate" title="lampiapi.AgentingTemplate">AgentingTemplate</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.sanitize_and_format_string">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_format_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.KeywordsTemplate" title="lampiapi.agentinghelper.KeywordsTemplate"><span class="pre">KeywordsTemplate</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.sanitize_and_format_string" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes and formats a string by replacing placeholders with values from a keywords template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> (<em>str</em>) – The string to sanitize and format.</p></li>
+<li><p><strong>keywords_template</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.KeywordsTemplate" title="lampiapi.KeywordsTemplate"><em>KeywordsTemplate</em></a><em>]</em>) – The keywords template containing keyword-value pairs.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description value to replace in the string.</p></li>
+<li><p><strong>language</strong> (<em>str</em>) – The language value to replace in the string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sanitized and formatted string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.sanitize_and_format_topic_content">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_format_topic_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.KeywordsTemplate" title="lampiapi.agentinghelper.KeywordsTemplate"><span class="pre">KeywordsTemplate</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.sanitize_and_format_topic_content" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes and formats the content of a topic by replacing placeholders with values from a keywords template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> (<em>str</em>) – The content to sanitize and format.</p></li>
+<li><p><strong>format_dict</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.KeywordsTemplate" title="lampiapi.KeywordsTemplate"><em>KeywordsTemplate</em></a><em>]</em>) – The keywords template containing keyword-value pairs.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description value to replace in the content.</p></li>
+<li><p><strong>language</strong> (<em>str</em>) – The language value to replace in the content.</p></li>
+<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>HTTPException</strong> – If an error occurs while sanitizing and formatting the content.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.sanitize_and_match">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.sanitize_and_match" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes a string and finds all matches of patterns enclosed in double curly braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize and match.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of matches found in the string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.sanitize_str">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.sanitize_str" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes a string by replacing double curly braces with placeholders and single curly braces with double curly braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sanitized string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.sanitize_str_to_single_bracket">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_str_to_single_bracket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.sanitize_str_to_single_bracket" title="Link to this definition"></a></dt>
+<dd><p>Sanitizes a string by replacing double curly braces with placeholders and single curly braces with double curly braces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sanitized string.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.sanity_check">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanity_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.agentinghelper.AgentingTemplate" title="lampiapi.agentinghelper.AgentingTemplate"><span class="pre">AgentingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.sanity_check" title="Link to this definition"></a></dt>
+<dd><p>Performs a sanity check on a AgentingTemplate object by validating its properties and formatting its content.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.AgentingTemplate" title="lampiapi.AgentingTemplate"><em>AgentingTemplate</em></a>) – The AgentingTemplate object to perform the sanity check on.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the sanity check passes, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.unique_entries_list">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unique_entries_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qlist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.unique_entries_list" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of unique entries from a given list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>qlist</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The list to get unique entries from.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of unique entries.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.validate_json_schema">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_json_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.AgentingHelper.validate_json_schema" title="Link to this definition"></a></dt>
+<dd><p>Validates a JSON object against a JSON schema.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json_data</strong> – The JSON object to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>HTTPException</strong> – If the JSON object is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.AgentingHelper.validate_question_app">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_question_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.AgentingHelper.validate_question_app" title="Link to this definition"></a></dt>
+<dd><p>Validates the apps property of a question by checking if the apps are valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic.</p></li>
+<li><p><strong>content</strong> (<em>str</em>) – The content of the question.</p></li>
+<li><p><strong>apps</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The apps to validate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>HTTPException</strong> – If the apps are not valid for the question.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lampiapi.AgentingTemplate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">AgentingTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">masterprompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'English'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.AgentingTemplate" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.AgentingTemplate.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.AgentingTemplate.description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.AgentingTemplate.keywords">
+<span class="sig-name descname"><span class="pre">keywords</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.AgentingTemplate.keywords" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.AgentingTemplate.language">
+<span class="sig-name descname"><span class="pre">language</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.AgentingTemplate.language" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.AgentingTemplate.masterprompt">
+<span class="sig-name descname"><span class="pre">masterprompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.AgentingTemplate.masterprompt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.AgentingTemplate.topics">
+<span class="sig-name descname"><span class="pre">topics</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Topic" title="lampiapi.agentinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.AgentingTemplate.topics" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="lampiapi.KeywordsTemplate">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">KeywordsTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.KeywordsTemplate" title="Link to this definition"></a></dt>
@@ -4091,291 +4374,8 @@ Default is 3600 seconds (1 hour).</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">ToolingHelper</span></span><a class="headerlink" href="#lampiapi.ToolingHelper" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A helper class for various utility functions related to tooling templates.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.add_keywords">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.add_keywords" title="Link to this definition"></a></dt>
-<dd><p>Adds keywords to a ToolingTemplate object by checking for keywords and updating the keywords property.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.ToolingTemplate" title="lampiapi.ToolingTemplate"><em>ToolingTemplate</em></a>) – The ToolingTemplate object to add keywords to.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A tuple indicating whether keywords were added and the updated ToolingTemplate object.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Tuple[bool, <a class="reference internal" href="#lampiapi.ToolingTemplate" title="lampiapi.ToolingTemplate">ToolingTemplate</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.check_keyword">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_keyword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.check_keyword" title="Link to this definition"></a></dt>
-<dd><p>Checks for keywords in a ToolingTemplate object by analyzing its properties.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.ToolingTemplate" title="lampiapi.ToolingTemplate"><em>ToolingTemplate</em></a>) – The ToolingTemplate object to check for keywords.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A list of keywords found in the ToolingTemplate object.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.extend_questions">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extend_questions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">questions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Question" title="lampiapi.toolinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.ToolingHelper.extend_questions" title="Link to this definition"></a></dt>
-<dd><p>Extends the questions property of a topic in a ToolingTemplate object with additional questions.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>json_data</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.Topic" title="lampiapi.Topic"><em>Topic</em></a><em>]</em>) – The list of topics in the ToolingTemplate object.</p></li>
-<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic to extend questions for.</p></li>
-<li><p><strong>questions</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.Question" title="lampiapi.Question"><em>Question</em></a><em>]</em>) – The additional questions to add to the topic.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.find_topic_by_name">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_topic_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.find_topic_by_name" title="Link to this definition"></a></dt>
-<dd><p>Finds a topic in a list of topics by its name.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>json_data</strong> (<em>List</em><em>[</em><a class="reference internal" href="#lampiapi.Topic" title="lampiapi.Topic"><em>Topic</em></a><em>]</em>) – The list of topics to search in.</p></li>
-<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic to find.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The found topic, or None if not found.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.Topic" title="lampiapi.Topic">Topic</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.fix_apps">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fix_apps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.fix_apps" title="Link to this definition"></a></dt>
-<dd><p>Fixes the apps property of questions in a ToolingTemplate object by removing invalid apps.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.ToolingTemplate" title="lampiapi.ToolingTemplate"><em>ToolingTemplate</em></a>) – The ToolingTemplate object to fix the apps property.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The updated ToolingTemplate object.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#lampiapi.ToolingTemplate" title="lampiapi.ToolingTemplate">ToolingTemplate</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.sanitize_and_format_string">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_format_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords_template</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.KeywordsTemplate" title="lampiapi.toolinghelper.KeywordsTemplate"><span class="pre">KeywordsTemplate</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.sanitize_and_format_string" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes and formats a string by replacing placeholders with values from a keywords template.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>string</strong> (<em>str</em>) – The string to sanitize and format.</p></li>
-<li><p><strong>keywords_template</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.KeywordsTemplate" title="lampiapi.KeywordsTemplate"><em>KeywordsTemplate</em></a><em>]</em>) – The keywords template containing keyword-value pairs.</p></li>
-<li><p><strong>description</strong> (<em>str</em>) – The description value to replace in the string.</p></li>
-<li><p><strong>language</strong> (<em>str</em>) – The language value to replace in the string.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sanitized and formatted string.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.sanitize_and_format_topic_content">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_format_topic_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.KeywordsTemplate" title="lampiapi.toolinghelper.KeywordsTemplate"><span class="pre">KeywordsTemplate</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.sanitize_and_format_topic_content" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes and formats the content of a topic by replacing placeholders with values from a keywords template.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>content</strong> (<em>str</em>) – The content to sanitize and format.</p></li>
-<li><p><strong>format_dict</strong> (<em>list</em><em>[</em><a class="reference internal" href="#lampiapi.KeywordsTemplate" title="lampiapi.KeywordsTemplate"><em>KeywordsTemplate</em></a><em>]</em>) – The keywords template containing keyword-value pairs.</p></li>
-<li><p><strong>description</strong> (<em>str</em>) – The description value to replace in the content.</p></li>
-<li><p><strong>language</strong> (<em>str</em>) – The language value to replace in the content.</p></li>
-<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>HTTPException</strong> – If an error occurs while sanitizing and formatting the content.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.sanitize_and_match">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_and_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.sanitize_and_match" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes a string and finds all matches of patterns enclosed in double curly braces.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize and match.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A list of matches found in the string.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.sanitize_str">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.sanitize_str" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes a string by replacing double curly braces with placeholders and single curly braces with double curly braces.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sanitized string.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.sanitize_str_to_single_bracket">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanitize_str_to_single_bracket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.sanitize_str_to_single_bracket" title="Link to this definition"></a></dt>
-<dd><p>Sanitizes a string by replacing double curly braces with placeholders and single curly braces with double curly braces.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>string</strong> (<em>str</em>) – The string to sanitize.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The sanitized string.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.sanity_check">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sanity_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lampiapi.toolinghelper.ToolingTemplate" title="lampiapi.toolinghelper.ToolingTemplate"><span class="pre">ToolingTemplate</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.sanity_check" title="Link to this definition"></a></dt>
-<dd><p>Performs a sanity check on a ToolingTemplate object by validating its properties and formatting its content.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> (<a class="reference internal" href="#lampiapi.ToolingTemplate" title="lampiapi.ToolingTemplate"><em>ToolingTemplate</em></a>) – The ToolingTemplate object to perform the sanity check on.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>True if the sanity check passes, False otherwise.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.unique_entries_list">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unique_entries_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qlist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.unique_entries_list" title="Link to this definition"></a></dt>
-<dd><p>Returns a list of unique entries from a given list.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>qlist</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The list to get unique entries from.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A list of unique entries.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.validate_json_schema">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_json_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.ToolingHelper.validate_json_schema" title="Link to this definition"></a></dt>
-<dd><p>Validates a JSON object against a JSON schema.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>json_data</strong> – The JSON object to validate.</p>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>HTTPException</strong> – If the JSON object is invalid.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="lampiapi.ToolingHelper.validate_question_app">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_question_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#lampiapi.ToolingHelper.validate_question_app" title="Link to this definition"></a></dt>
-<dd><p>Validates the apps property of a question by checking if the apps are valid.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>topic_name</strong> (<em>str</em>) – The name of the topic.</p></li>
-<li><p><strong>content</strong> (<em>str</em>) – The content of the question.</p></li>
-<li><p><strong>apps</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – The apps to validate.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>HTTPException</strong> – If the apps are not valid for the question.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="lampiapi.ToolingTemplate">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">ToolingTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">masterprompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'English'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.ToolingTemplate" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.ToolingTemplate.description">
-<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.ToolingTemplate.description" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.ToolingTemplate.keywords">
-<span class="sig-name descname"><span class="pre">keywords</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.ToolingTemplate.keywords" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.ToolingTemplate.language">
-<span class="sig-name descname"><span class="pre">language</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.ToolingTemplate.language" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.ToolingTemplate.masterprompt">
-<span class="sig-name descname"><span class="pre">masterprompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lampiapi.ToolingTemplate.masterprompt" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="lampiapi.ToolingTemplate.topics">
-<span class="sig-name descname"><span class="pre">topics</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Topic" title="lampiapi.toolinghelper.Topic"><span class="pre">Topic</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.ToolingTemplate.topics" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="lampiapi.Topic">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">Topic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">questions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Question" title="lampiapi.toolinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condensateprompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.Topic" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">Topic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">questions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Question" title="lampiapi.agentinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condensateprompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.Topic" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lampiapi.Topic.condensateprompt">
@@ -4389,7 +4389,7 @@ Default is 3600 seconds (1 hour).</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lampiapi.Topic.questions">
-<span class="sig-name descname"><span class="pre">questions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.toolinghelper.Question" title="lampiapi.toolinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.Topic.questions" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">questions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lampiapi.agentinghelper.Question" title="lampiapi.agentinghelper.Question"><span class="pre">Question</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lampiapi.Topic.questions" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
