@@ -854,11 +854,11 @@ If not provided, a default logger will be created.</p>
 <p># Convert an image to text via the Lampi API:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
 <span class="n">organization_id</span> <span class="o">=</span> <span class="mi">123</span>
-<span class="n">nb_tokens</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nb_tokens</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">directory_path</span><span class="si">}</span><span class="s2">/screenshot_resized/screenshot_</span><span class="si">{</span><span class="n">speaker</span><span class="si">}</span><span class="s2">.png&quot;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="s2">&quot;image/jpeg&quot;</span><span class="p">)}</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">image_to_text</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">image_to_text</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">nb_tokens</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3015,11 +3015,11 @@ If not provided, a default logger will be created.</p>
 <p># Convert an image to text via the Lampi API:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
 <span class="n">organization_id</span> <span class="o">=</span> <span class="mi">123</span>
-<span class="n">nb_tokens</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nb_tokens</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">directory_path</span><span class="si">}</span><span class="s2">/screenshot_resized/screenshot_</span><span class="si">{</span><span class="n">speaker</span><span class="si">}</span><span class="s2">.png&quot;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="s2">&quot;image/jpeg&quot;</span><span class="p">)}</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">image_to_text</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">image_to_text</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">nb_tokens</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
