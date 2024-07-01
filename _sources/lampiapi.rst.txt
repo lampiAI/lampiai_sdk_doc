@@ -4,14 +4,6 @@ lampiapi package
 Submodules
 ----------
 
-lampiapi.agentinghelper module
-------------------------------
-
-.. automodule:: lampiapi.agentinghelper
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 lampiapi.lampiapi module
 ------------------------
 
@@ -56,6 +48,14 @@ lampiapi.task\_manager module
 -----------------------------
 
 .. automodule:: lampiapi.task_manager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+lampiapi.toolinghelper module
+-----------------------------
+
+.. automodule:: lampiapi.toolinghelper
    :members:
    :undoc-members:
    :show-inheritance:
