@@ -582,6 +582,38 @@ If not provided, a default logger will be created.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.update_document_summary">
+<span class="sig-name descname"><span class="pre">update_document_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.update_document_summary" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Update a document summary via the Lampi API.</p>
+<dl>
+<dt>Args:</dt><dd><p>document_id (int): The document_id to update.
+summary_status (bool): The status to update.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict or None: The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt>Example:</dt><dd><p># Update a document summary via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">summary_status</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">document_id</span> <span class="o">=</span> <span class="mi">123</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>summary_status                if summary_result:</dt><dd><blockquote>
+<div><p>print(“Summary successfully updated”)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>print(“The summary update failed.”)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.update_status_by_id">
 <span class="sig-name descname"><span class="pre">update_status_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.update_status_by_id" title="Link to this definition"></a></dt>
 <dd><p>Update the status of a document by ID via the Lampi API.</p>
@@ -2817,6 +2849,38 @@ If not provided, a default logger will be created.</p>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating summary tasks failed.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.update_document_summary">
+<span class="sig-name descname"><span class="pre">update_document_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#lampiapi.LampiAPI.update_document_summary" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Update a document summary via the Lampi API.</p>
+<dl>
+<dt>Args:</dt><dd><p>document_id (int): The document_id to update.
+summary_status (bool): The status to update.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict or None: The JSON data from the response if successful, None otherwise.</p>
+</dd>
+<dt>Example:</dt><dd><p># Update a document summary via the Lampi API:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">LampiAPI</span><span class="p">()</span>
+<span class="n">summary_status</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">document_id</span> <span class="o">=</span> <span class="mi">123</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<dl>
+<dt>summary_status                if summary_result:</dt><dd><blockquote>
+<div><p>print(“Summary successfully updated”)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>print(“The summary update failed.”)</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
