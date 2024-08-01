@@ -220,6 +220,8 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_running_tasks_all_users"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_running_tasks_all_users()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_task_by_id"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_task_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_tasks_with_user_validation"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_tasks_with_user_validation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.queue_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.queue_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.start_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.start_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.update_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.update_tool_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_tool_task()</span></code></a></li>
@@ -243,6 +245,7 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.task_type"><code class="docutils literal notranslate"><span class="pre">TaskModel.task_type</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.user_id"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_id</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.user_info"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_info</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.user_validation"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_validation</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus"><code class="docutils literal notranslate"><span class="pre">TaskStatus</span></code></a><ul>
@@ -250,6 +253,7 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.completed"><code class="docutils literal notranslate"><span class="pre">TaskStatus.completed</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.failed"><code class="docutils literal notranslate"><span class="pre">TaskStatus.failed</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.pending"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pending</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.pending_validation"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pending_validation</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.running"><code class="docutils literal notranslate"><span class="pre">TaskStatus.running</span></code></a></li>
 </ul>
 </li>
@@ -258,6 +262,7 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.completed"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.completed</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.failed"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.failed</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.pending"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pending</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.pending_validation"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pending_validation</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a><ul>
@@ -469,6 +474,8 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_running_tasks_all_users"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_running_tasks_all_users()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_task_by_id"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_task_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_tasks_with_user_validation"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_tasks_with_user_validation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.queue_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.queue_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.start_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.start_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.update_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.update_tool_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_tool_task()</span></code></a></li>
@@ -492,6 +499,7 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.task_type"><code class="docutils literal notranslate"><span class="pre">TaskModel.task_type</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.user_id"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_id</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.user_info"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_info</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.user_validation"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_validation</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus"><code class="docutils literal notranslate"><span class="pre">TaskStatus</span></code></a><ul>
@@ -499,6 +507,7 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.completed"><code class="docutils literal notranslate"><span class="pre">TaskStatus.completed</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.failed"><code class="docutils literal notranslate"><span class="pre">TaskStatus.failed</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.pending"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pending</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.pending_validation"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pending_validation</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.running"><code class="docutils literal notranslate"><span class="pre">TaskStatus.running</span></code></a></li>
 </ul>
 </li>
@@ -507,6 +516,7 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.completed"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.completed</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.failed"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.failed</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.pending"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pending</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.pending_validation"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pending_validation</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper"><code class="docutils literal notranslate"><span class="pre">ToolingHelper</span></code></a><ul>
