@@ -147,7 +147,7 @@
 <span id="lampiapi-lampiapi-module"></span><h2>lampiapi.lampiapi module<a class="headerlink" href="#module-lampiapi.lampiapi" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.lampiapi.</span></span><span class="sig-name descname"><span class="pre">LampiAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.lampiapi.</span></span><span class="sig-name descname"><span class="pre">LampiAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class for interacting with the Lampi API.
 ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
@@ -158,6 +158,17 @@ ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.lampiapi.LampiAPI.log_level">
+<span class="sig-name descname"><span class="pre">log_level</span></span><a class="headerlink" href="#lampiapi.lampiapi.LampiAPI.log_level" title="Link to this definition"></a></dt>
+<dd><p>The log level to use for logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1545,7 +1556,7 @@ Default is 3600 seconds (1 hour).</p></li>
 <span id="lampiapi-task-manager-module"></span><h2>lampiapi.task_manager module<a class="headerlink" href="#module-lampiapi.task_manager" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="lampiapi.task_manager.TaskManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.task_manager.</span></span><span class="sig-name descname"><span class="pre">TaskManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Redis</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.task_manager.</span></span><span class="sig-name descname"><span class="pre">TaskManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Redis</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.task_manager.TaskManager" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class that manages tasks for a user.</p>
 <dl class="field-list simple">
@@ -1553,6 +1564,7 @@ Default is 3600 seconds (1 hour).</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>redis</strong> (<em>Redis</em>) – The Redis client used for task storage.</p></li>
 <li><p><strong>user_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The ID of the user. Defaults to None.</p></li>
+<li><p><strong>log_level</strong> (<em>str</em>) – The log level to use for logging.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1948,6 +1960,11 @@ Default is 3600 seconds (1 hour).</p></li>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatus.pausing">
+<span class="sig-name descname"><span class="pre">pausing</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pausing'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatus.pausing" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatus.pending">
 <span class="sig-name descname"><span class="pre">pending</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatus.pending" title="Link to this definition"></a></dt>
 <dd></dd></dl>
@@ -1992,6 +2009,11 @@ Default is 3600 seconds (1 hour).</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatusNotRunning.pause">
 <span class="sig-name descname"><span class="pre">pause</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pause'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatusNotRunning.pause" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.task_manager.TaskStatusNotRunning.pausing">
+<span class="sig-name descname"><span class="pre">pausing</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pausing'</span></em><a class="headerlink" href="#lampiapi.task_manager.TaskStatusNotRunning.pausing" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -2535,7 +2557,7 @@ Default is None.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lampiapi.LampiAPI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">LampiAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.LampiAPI" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">LampiAPI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Logger</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.LampiAPI" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class for interacting with the Lampi API.
 ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
@@ -2546,6 +2568,17 @@ ADMINAUTH and BACK_URL must be exposed as environment variables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.LampiAPI.log_level">
+<span class="sig-name descname"><span class="pre">log_level</span></span><a class="headerlink" href="#lampiapi.LampiAPI.log_level" title="Link to this definition"></a></dt>
+<dd><p>The log level to use for logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3933,7 +3966,7 @@ Default is 3600 seconds (1 hour).</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lampiapi.TaskManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">TaskManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Redis</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lampiapi.</span></span><span class="sig-name descname"><span class="pre">TaskManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Redis</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lampiapi.TaskManager" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class that manages tasks for a user.</p>
 <dl class="field-list simple">
@@ -3941,6 +3974,7 @@ Default is 3600 seconds (1 hour).</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>redis</strong> (<em>Redis</em>) – The Redis client used for task storage.</p></li>
 <li><p><strong>user_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The ID of the user. Defaults to None.</p></li>
+<li><p><strong>log_level</strong> (<em>str</em>) – The log level to use for logging.</p></li>
 </ul>
 </dd>
 </dl>
@@ -4336,6 +4370,11 @@ Default is 3600 seconds (1 hour).</p></li>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatus.pausing">
+<span class="sig-name descname"><span class="pre">pausing</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pausing'</span></em><a class="headerlink" href="#lampiapi.TaskStatus.pausing" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="lampiapi.TaskStatus.pending">
 <span class="sig-name descname"><span class="pre">pending</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending'</span></em><a class="headerlink" href="#lampiapi.TaskStatus.pending" title="Link to this definition"></a></dt>
 <dd></dd></dl>
@@ -4380,6 +4419,11 @@ Default is 3600 seconds (1 hour).</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lampiapi.TaskStatusNotRunning.pause">
 <span class="sig-name descname"><span class="pre">pause</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pause'</span></em><a class="headerlink" href="#lampiapi.TaskStatusNotRunning.pause" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lampiapi.TaskStatusNotRunning.pausing">
+<span class="sig-name descname"><span class="pre">pausing</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pausing'</span></em><a class="headerlink" href="#lampiapi.TaskStatusNotRunning.pausing" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
