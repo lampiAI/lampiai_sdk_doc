@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lampiapi &mdash; Lampi API Lampi API documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=540c8e58"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lampiapi package" href="lampiapi.html" />
+    <link rel="prev" title="Welcome to Lampi API’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Lampi API
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">lampiapi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html">lampiapi package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Lampi API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">lampiapi</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lampiapi">
+<h1>lampiapi<a class="headerlink" href="#lampiapi" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lampiapi.html">lampiapi package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.lampiapi">lampiapi.lampiapi module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.logger"><code class="docutils literal notranslate"><span class="pre">LampiAPI.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.log_level"><code class="docutils literal notranslate"><span class="pre">LampiAPI.log_level</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.create_chat_meeting"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_chat_meeting()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.create_document_to_sync"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_document_to_sync()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.create_global_summary_as_admin_for_document_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_global_summary_as_admin_for_document_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.create_meeting"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_meeting()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.finish_task"><code class="docutils literal notranslate"><span class="pre">LampiAPI.finish_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.finish_task_summary"><code class="docutils literal notranslate"><span class="pre">LampiAPI.finish_task_summary()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.get_document_by_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.get_document_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.get_document_status_by_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.get_document_status_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.get_file_hash"><code class="docutils literal notranslate"><span class="pre">LampiAPI.get_file_hash()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.image_to_text"><code class="docutils literal notranslate"><span class="pre">LampiAPI.image_to_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.list_all_users_with_providers"><code class="docutils literal notranslate"><span class="pre">LampiAPI.list_all_users_with_providers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.list_single_user_with_provider"><code class="docutils literal notranslate"><span class="pre">LampiAPI.list_single_user_with_provider()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.trigger_task"><code class="docutils literal notranslate"><span class="pre">LampiAPI.trigger_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.update_document_summary"><code class="docutils literal notranslate"><span class="pre">LampiAPI.update_document_summary()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.update_status_by_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.update_status_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiAPI.user_by_email"><code class="docutils literal notranslate"><span class="pre">LampiAPI.user_by_email()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus"><code class="docutils literal notranslate"><span class="pre">LampiStatus</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.CREATE"><code class="docutils literal notranslate"><span class="pre">LampiStatus.CREATE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.CREATED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.CREATED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.CREATE_VM"><code class="docutils literal notranslate"><span class="pre">LampiStatus.CREATE_VM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.DEPLOY"><code class="docutils literal notranslate"><span class="pre">LampiStatus.DEPLOY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.DEPLOYED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.DEPLOYED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.END"><code class="docutils literal notranslate"><span class="pre">LampiStatus.END</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.ERROR_DEPLOYING_VM"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_DEPLOYING_VM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.ERROR_DOWNLOAD_CONNECTOR"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_DOWNLOAD_CONNECTOR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.ERROR_DOWNLOAD_S3"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_DOWNLOAD_S3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.ERROR_TRANSCODING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_TRANSCODING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.ERROR_TRANSCODING_OR_TRANSCRIPTING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_TRANSCODING_OR_TRANSCRIPTING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.ERROR_TRANSCRIPTING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_TRANSCRIPTING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.FAILED_EMPTY_DOC"><code class="docutils literal notranslate"><span class="pre">LampiStatus.FAILED_EMPTY_DOC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.FAILED_TO_LOAD_DOC"><code class="docutils literal notranslate"><span class="pre">LampiStatus.FAILED_TO_LOAD_DOC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.FINISHED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.FINISHED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.INIT"><code class="docutils literal notranslate"><span class="pre">LampiStatus.INIT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.INSTALL"><code class="docutils literal notranslate"><span class="pre">LampiStatus.INSTALL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.INSTALLED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.INSTALLED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.INSTALLING_SYSTEM"><code class="docutils literal notranslate"><span class="pre">LampiStatus.INSTALLING_SYSTEM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.PENDING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.PENDING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.RESERVE_S3"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RESERVE_S3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.RUN_CNX"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RUN_CNX</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.RUN_INIT"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RUN_INIT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.RUN_INIT_RECORD"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RUN_INIT_RECORD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.RUN_RECORD"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RUN_RECORD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.SEND"><code class="docutils literal notranslate"><span class="pre">LampiStatus.SEND</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.SENT"><code class="docutils literal notranslate"><span class="pre">LampiStatus.SENT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.START"><code class="docutils literal notranslate"><span class="pre">LampiStatus.START</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.STOP"><code class="docutils literal notranslate"><span class="pre">LampiStatus.STOP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.SUMMARY_FAILED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.SUMMARY_FAILED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.SUMMARY_IN_PROGRESS"><code class="docutils literal notranslate"><span class="pre">LampiStatus.SUMMARY_IN_PROGRESS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.TRAINED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRAINED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.TRAINING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRAINING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.TRANSCODED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCODED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.TRANSCODING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCODING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.TRANSCRIPT"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCRIPT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.TRANSCRIPTED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCRIPTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.TRANSCRIPTING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCRIPTING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">LampiStatus.UNKNOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.UPLOADED_TO_S3"><code class="docutils literal notranslate"><span class="pre">LampiStatus.UPLOADED_TO_S3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.lampiapi.LampiStatus.VISIO"><code class="docutils literal notranslate"><span class="pre">LampiStatus.VISIO</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.mylogger">lampiapi.mylogger module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.mylogger.MyLogger"><code class="docutils literal notranslate"><span class="pre">MyLogger</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.mylogger.MyLogger.get_logger"><code class="docutils literal notranslate"><span class="pre">MyLogger.get_logger()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.remote_ssh">lampiapi.remote_ssh module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.remote_ssh.RemoteSSHClient"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.remote_ssh.RemoteSSHClient.check_connection"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.check_connection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.remote_ssh.RemoteSSHClient.close"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.remote_ssh.RemoteSSHClient.connect"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.remote_ssh.RemoteSSHClient.execute_commands"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.execute_commands()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.remote_ssh.RemoteSSHClient.sftp_transfer"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.sftp_transfer()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.s3">lampiapi.s3 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3"><code class="docutils literal notranslate"><span class="pre">S3</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.logger"><code class="docutils literal notranslate"><span class="pre">S3.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.create_presigned_post"><code class="docutils literal notranslate"><span class="pre">S3.create_presigned_post()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.create_presigned_url"><code class="docutils literal notranslate"><span class="pre">S3.create_presigned_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.delete_files"><code class="docutils literal notranslate"><span class="pre">S3.delete_files()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.get_file"><code class="docutils literal notranslate"><span class="pre">S3.get_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.get_file_payload"><code class="docutils literal notranslate"><span class="pre">S3.get_file_payload()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.list_files"><code class="docutils literal notranslate"><span class="pre">S3.list_files()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.put_file"><code class="docutils literal notranslate"><span class="pre">S3.put_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.put_file_blob"><code class="docutils literal notranslate"><span class="pre">S3.put_file_blob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.recursive_delete_s3_objects"><code class="docutils literal notranslate"><span class="pre">S3.recursive_delete_s3_objects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.recursive_download_s3_objects"><code class="docutils literal notranslate"><span class="pre">S3.recursive_download_s3_objects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.s3.S3.rename_file"><code class="docutils literal notranslate"><span class="pre">S3.rename_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.scaleway_api">lampiapi.scaleway_api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.create_a_vm"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.create_a_vm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.create_instance"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.create_instance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.create_volume"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.create_volume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.delete_available_volumes"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.delete_available_volumes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.delete_instance_by_id"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.delete_instance_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.delete_volume_by_id"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.delete_volume_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.get_images"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.get_instance_by_id"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_instance_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.get_instances"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_instances()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.get_servers"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_servers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.get_vm_created"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_vm_created()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.get_vm_status"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_vm_status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.get_volumes"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_volumes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.perform_instance_action_by_id"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.perform_instance_action_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.start_a_vm"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.start_a_vm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.stop_a_vm"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.stop_a_vm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.scaleway_api.ScaleWayAPI.stop_and_destroy_vm"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.stop_and_destroy_vm()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.task_manager">lampiapi.task_manager module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager"><code class="docutils literal notranslate"><span class="pre">TaskManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.cancel_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.cancel_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.clear_all_tasks"><code class="docutils literal notranslate"><span class="pre">TaskManager.clear_all_tasks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.clear_all_tasks_for_all_users"><code class="docutils literal notranslate"><span class="pre">TaskManager.clear_all_tasks_for_all_users()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.clear_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.clear_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.clear_task_for_statuses"><code class="docutils literal notranslate"><span class="pre">TaskManager.clear_task_for_statuses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.complete_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.complete_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.delete_not_running_tasks"><code class="docutils literal notranslate"><span class="pre">TaskManager.delete_not_running_tasks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.delete_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.delete_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.fail_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.fail_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_running_tasks"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_running_tasks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_running_tasks_all_users"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_running_tasks_all_users()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_task_by_id"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_task_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_tasks_with_user_validation"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_tasks_with_user_validation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.pause_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.pause_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.queue_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.queue_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.resume_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.resume_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.start_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.start_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.update_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.update_tool_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_tool_task()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel"><code class="docutils literal notranslate"><span class="pre">TaskModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.Config"><code class="docutils literal notranslate"><span class="pre">TaskModel.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.data"><code class="docutils literal notranslate"><span class="pre">TaskModel.data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.data_agent"><code class="docutils literal notranslate"><span class="pre">TaskModel.data_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.description"><code class="docutils literal notranslate"><span class="pre">TaskModel.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.elapsed_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.elapsed_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.end_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.end_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.estimated_total_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.estimated_total_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.name"><code class="docutils literal notranslate"><span class="pre">TaskModel.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.note_id"><code class="docutils literal notranslate"><span class="pre">TaskModel.note_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.remaining_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.remaining_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.result"><code class="docutils literal notranslate"><span class="pre">TaskModel.result</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.start_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.start_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.status"><code class="docutils literal notranslate"><span class="pre">TaskModel.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.task_id"><code class="docutils literal notranslate"><span class="pre">TaskModel.task_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.task_type"><code class="docutils literal notranslate"><span class="pre">TaskModel.task_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.user_id"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.user_info"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_info</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.user_validation"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_validation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus"><code class="docutils literal notranslate"><span class="pre">TaskStatus</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.all"><code class="docutils literal notranslate"><span class="pre">TaskStatus.all</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.canceled"><code class="docutils literal notranslate"><span class="pre">TaskStatus.canceled</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.completed"><code class="docutils literal notranslate"><span class="pre">TaskStatus.completed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.failed"><code class="docutils literal notranslate"><span class="pre">TaskStatus.failed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.pause"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pause</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.pausing"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pausing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.pending"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pending</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.pending_validation"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pending_validation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatus.running"><code class="docutils literal notranslate"><span class="pre">TaskStatus.running</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.all"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.all</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.canceled"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.canceled</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.completed"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.completed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.failed"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.failed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.pause"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pause</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.pausing"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pausing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.pending"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pending</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskStatusNotRunning.pending_validation"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pending_validation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.User_info.channel"><code class="docutils literal notranslate"><span class="pre">User_info.channel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.User_info.department_id"><code class="docutils literal notranslate"><span class="pre">User_info.department_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.User_info.name"><code class="docutils literal notranslate"><span class="pre">User_info.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.User_info.query"><code class="docutils literal notranslate"><span class="pre">User_info.query</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.User_info.store_user_message"><code class="docutils literal notranslate"><span class="pre">User_info.store_user_message</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.User_info.toolname"><code class="docutils literal notranslate"><span class="pre">User_info.toolname</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.User_info.tools"><code class="docutils literal notranslate"><span class="pre">User_info.tools</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.toolinghelper">lampiapi.toolinghelper module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.KeywordsTemplate"><code class="docutils literal notranslate"><span class="pre">KeywordsTemplate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.KeywordsTemplate.keyword"><code class="docutils literal notranslate"><span class="pre">KeywordsTemplate.keyword</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.KeywordsTemplate.value"><code class="docutils literal notranslate"><span class="pre">KeywordsTemplate.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Question"><code class="docutils literal notranslate"><span class="pre">Question</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Question.apps"><code class="docutils literal notranslate"><span class="pre">Question.apps</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Question.id"><code class="docutils literal notranslate"><span class="pre">Question.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Question.question"><code class="docutils literal notranslate"><span class="pre">Question.question</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Question.validate_apps"><code class="docutils literal notranslate"><span class="pre">Question.validate_apps()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Template"><code class="docutils literal notranslate"><span class="pre">Template</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Template.system_prompt"><code class="docutils literal notranslate"><span class="pre">Template.system_prompt</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper"><code class="docutils literal notranslate"><span class="pre">ToolingHelper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.add_keywords"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.add_keywords()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.check_keyword"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.check_keyword()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.extend_questions"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.extend_questions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.find_topic_by_name"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.find_topic_by_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.fix_apps"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.fix_apps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.sanitize_and_format_string"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_and_format_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.sanitize_and_format_topic_content"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_and_format_topic_content()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.sanitize_and_match"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_and_match()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.sanitize_str"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_str()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.sanitize_str_to_single_bracket"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_str_to_single_bracket()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.sanity_check"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanity_check()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.unique_entries_list"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.unique_entries_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.validate_json_schema"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.validate_json_schema()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingHelper.validate_question_app"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.validate_question_app()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingTemplate"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingTemplate.description"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingTemplate.keywords"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.keywords</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingTemplate.language"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.language</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingTemplate.masterprompt"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.masterprompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.ToolingTemplate.topics"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.topics</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Topic"><code class="docutils literal notranslate"><span class="pre">Topic</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Topic.condensateprompt"><code class="docutils literal notranslate"><span class="pre">Topic.condensateprompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Topic.name"><code class="docutils literal notranslate"><span class="pre">Topic.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Topic.questions"><code class="docutils literal notranslate"><span class="pre">Topic.questions</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.transcript_api">lampiapi.transcript_api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.transcript_api.TranscriptAPI"><code class="docutils literal notranslate"><span class="pre">TranscriptAPI</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.transcript_api.TranscriptAPI.audio_file_path"><code class="docutils literal notranslate"><span class="pre">TranscriptAPI.audio_file_path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.transcript_api.TranscriptAPI.batch_size"><code class="docutils literal notranslate"><span class="pre">TranscriptAPI.batch_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.transcript_api.TranscriptAPI.compute_type"><code class="docutils literal notranslate"><span class="pre">TranscriptAPI.compute_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.transcript_api.TranscriptAPI.hf_token"><code class="docutils literal notranslate"><span class="pre">TranscriptAPI.hf_token</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.transcript_api.TranscriptAPI.language"><code class="docutils literal notranslate"><span class="pre">TranscriptAPI.language</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.transcript_api.TranscriptAPI.transcript"><code class="docutils literal notranslate"><span class="pre">TranscriptAPI.transcript()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.transcript_api.detect_language"><code class="docutils literal notranslate"><span class="pre">detect_language()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.KeywordsTemplate"><code class="docutils literal notranslate"><span class="pre">KeywordsTemplate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.KeywordsTemplate.keyword"><code class="docutils literal notranslate"><span class="pre">KeywordsTemplate.keyword</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.KeywordsTemplate.value"><code class="docutils literal notranslate"><span class="pre">KeywordsTemplate.value</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI"><code class="docutils literal notranslate"><span class="pre">LampiAPI</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.logger"><code class="docutils literal notranslate"><span class="pre">LampiAPI.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.log_level"><code class="docutils literal notranslate"><span class="pre">LampiAPI.log_level</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.create_chat_meeting"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_chat_meeting()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.create_document_to_sync"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_document_to_sync()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.create_global_summary_as_admin_for_document_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_global_summary_as_admin_for_document_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.create_meeting"><code class="docutils literal notranslate"><span class="pre">LampiAPI.create_meeting()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.finish_task"><code class="docutils literal notranslate"><span class="pre">LampiAPI.finish_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.finish_task_summary"><code class="docutils literal notranslate"><span class="pre">LampiAPI.finish_task_summary()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.get_document_by_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.get_document_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.get_document_status_by_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.get_document_status_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.get_file_hash"><code class="docutils literal notranslate"><span class="pre">LampiAPI.get_file_hash()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.image_to_text"><code class="docutils literal notranslate"><span class="pre">LampiAPI.image_to_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.list_all_users_with_providers"><code class="docutils literal notranslate"><span class="pre">LampiAPI.list_all_users_with_providers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.list_single_user_with_provider"><code class="docutils literal notranslate"><span class="pre">LampiAPI.list_single_user_with_provider()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.trigger_task"><code class="docutils literal notranslate"><span class="pre">LampiAPI.trigger_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.update_document_summary"><code class="docutils literal notranslate"><span class="pre">LampiAPI.update_document_summary()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.update_status_by_id"><code class="docutils literal notranslate"><span class="pre">LampiAPI.update_status_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiAPI.user_by_email"><code class="docutils literal notranslate"><span class="pre">LampiAPI.user_by_email()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus"><code class="docutils literal notranslate"><span class="pre">LampiStatus</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.CREATE"><code class="docutils literal notranslate"><span class="pre">LampiStatus.CREATE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.CREATED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.CREATED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.CREATE_VM"><code class="docutils literal notranslate"><span class="pre">LampiStatus.CREATE_VM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.DEPLOY"><code class="docutils literal notranslate"><span class="pre">LampiStatus.DEPLOY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.DEPLOYED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.DEPLOYED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.END"><code class="docutils literal notranslate"><span class="pre">LampiStatus.END</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.ERROR_DEPLOYING_VM"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_DEPLOYING_VM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.ERROR_DOWNLOAD_CONNECTOR"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_DOWNLOAD_CONNECTOR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.ERROR_DOWNLOAD_S3"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_DOWNLOAD_S3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.ERROR_TRANSCODING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_TRANSCODING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.ERROR_TRANSCODING_OR_TRANSCRIPTING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_TRANSCODING_OR_TRANSCRIPTING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.ERROR_TRANSCRIPTING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.ERROR_TRANSCRIPTING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.FAILED_EMPTY_DOC"><code class="docutils literal notranslate"><span class="pre">LampiStatus.FAILED_EMPTY_DOC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.FAILED_TO_LOAD_DOC"><code class="docutils literal notranslate"><span class="pre">LampiStatus.FAILED_TO_LOAD_DOC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.FINISHED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.FINISHED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.INIT"><code class="docutils literal notranslate"><span class="pre">LampiStatus.INIT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.INSTALL"><code class="docutils literal notranslate"><span class="pre">LampiStatus.INSTALL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.INSTALLED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.INSTALLED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.INSTALLING_SYSTEM"><code class="docutils literal notranslate"><span class="pre">LampiStatus.INSTALLING_SYSTEM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.PENDING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.PENDING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.RESERVE_S3"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RESERVE_S3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.RUN_CNX"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RUN_CNX</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.RUN_INIT"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RUN_INIT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.RUN_INIT_RECORD"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RUN_INIT_RECORD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.RUN_RECORD"><code class="docutils literal notranslate"><span class="pre">LampiStatus.RUN_RECORD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.SEND"><code class="docutils literal notranslate"><span class="pre">LampiStatus.SEND</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.SENT"><code class="docutils literal notranslate"><span class="pre">LampiStatus.SENT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.START"><code class="docutils literal notranslate"><span class="pre">LampiStatus.START</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.STOP"><code class="docutils literal notranslate"><span class="pre">LampiStatus.STOP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.SUMMARY_FAILED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.SUMMARY_FAILED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.SUMMARY_IN_PROGRESS"><code class="docutils literal notranslate"><span class="pre">LampiStatus.SUMMARY_IN_PROGRESS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.TRAINED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRAINED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.TRAINING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRAINING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.TRANSCODED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCODED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.TRANSCODING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCODING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.TRANSCRIPT"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCRIPT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.TRANSCRIPTED"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCRIPTED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.TRANSCRIPTING"><code class="docutils literal notranslate"><span class="pre">LampiStatus.TRANSCRIPTING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">LampiStatus.UNKNOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.UPLOADED_TO_S3"><code class="docutils literal notranslate"><span class="pre">LampiStatus.UPLOADED_TO_S3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.LampiStatus.VISIO"><code class="docutils literal notranslate"><span class="pre">LampiStatus.VISIO</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.Question"><code class="docutils literal notranslate"><span class="pre">Question</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Question.apps"><code class="docutils literal notranslate"><span class="pre">Question.apps</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Question.id"><code class="docutils literal notranslate"><span class="pre">Question.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Question.question"><code class="docutils literal notranslate"><span class="pre">Question.question</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Question.validate_apps"><code class="docutils literal notranslate"><span class="pre">Question.validate_apps()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.RemoteSSHClient"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.RemoteSSHClient.check_connection"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.check_connection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.RemoteSSHClient.close"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.RemoteSSHClient.connect"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.RemoteSSHClient.execute_commands"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.execute_commands()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.RemoteSSHClient.sftp_transfer"><code class="docutils literal notranslate"><span class="pre">RemoteSSHClient.sftp_transfer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.S3"><code class="docutils literal notranslate"><span class="pre">S3</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.logger"><code class="docutils literal notranslate"><span class="pre">S3.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.create_presigned_post"><code class="docutils literal notranslate"><span class="pre">S3.create_presigned_post()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.create_presigned_url"><code class="docutils literal notranslate"><span class="pre">S3.create_presigned_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.delete_files"><code class="docutils literal notranslate"><span class="pre">S3.delete_files()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.get_file"><code class="docutils literal notranslate"><span class="pre">S3.get_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.get_file_payload"><code class="docutils literal notranslate"><span class="pre">S3.get_file_payload()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.list_files"><code class="docutils literal notranslate"><span class="pre">S3.list_files()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.put_file"><code class="docutils literal notranslate"><span class="pre">S3.put_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.put_file_blob"><code class="docutils literal notranslate"><span class="pre">S3.put_file_blob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.recursive_delete_s3_objects"><code class="docutils literal notranslate"><span class="pre">S3.recursive_delete_s3_objects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.recursive_download_s3_objects"><code class="docutils literal notranslate"><span class="pre">S3.recursive_download_s3_objects()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.S3.rename_file"><code class="docutils literal notranslate"><span class="pre">S3.rename_file()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.create_a_vm"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.create_a_vm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.create_instance"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.create_instance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.create_volume"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.create_volume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.delete_available_volumes"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.delete_available_volumes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.delete_instance_by_id"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.delete_instance_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.delete_volume_by_id"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.delete_volume_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.get_images"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.get_instance_by_id"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_instance_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.get_instances"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_instances()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.get_servers"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_servers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.get_vm_created"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_vm_created()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.get_vm_status"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_vm_status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.get_volumes"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.get_volumes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.perform_instance_action_by_id"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.perform_instance_action_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.start_a_vm"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.start_a_vm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.stop_a_vm"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.stop_a_vm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ScaleWayAPI.stop_and_destroy_vm"><code class="docutils literal notranslate"><span class="pre">ScaleWayAPI.stop_and_destroy_vm()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager"><code class="docutils literal notranslate"><span class="pre">TaskManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.cancel_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.cancel_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.clear_all_tasks"><code class="docutils literal notranslate"><span class="pre">TaskManager.clear_all_tasks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.clear_all_tasks_for_all_users"><code class="docutils literal notranslate"><span class="pre">TaskManager.clear_all_tasks_for_all_users()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.clear_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.clear_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.clear_task_for_statuses"><code class="docutils literal notranslate"><span class="pre">TaskManager.clear_task_for_statuses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.complete_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.complete_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.delete_not_running_tasks"><code class="docutils literal notranslate"><span class="pre">TaskManager.delete_not_running_tasks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.delete_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.delete_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.fail_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.fail_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_running_tasks"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_running_tasks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_running_tasks_all_users"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_running_tasks_all_users()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_task_by_id"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_task_by_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_tasks_with_user_validation"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_tasks_with_user_validation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.pause_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.pause_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.queue_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.queue_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.resume_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.resume_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.start_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.start_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.update_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.update_tool_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_tool_task()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel"><code class="docutils literal notranslate"><span class="pre">TaskModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.Config"><code class="docutils literal notranslate"><span class="pre">TaskModel.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.data"><code class="docutils literal notranslate"><span class="pre">TaskModel.data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.data_agent"><code class="docutils literal notranslate"><span class="pre">TaskModel.data_agent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.description"><code class="docutils literal notranslate"><span class="pre">TaskModel.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.elapsed_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.elapsed_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.end_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.end_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.estimated_total_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.estimated_total_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.name"><code class="docutils literal notranslate"><span class="pre">TaskModel.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.note_id"><code class="docutils literal notranslate"><span class="pre">TaskModel.note_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.remaining_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.remaining_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.result"><code class="docutils literal notranslate"><span class="pre">TaskModel.result</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.start_time"><code class="docutils literal notranslate"><span class="pre">TaskModel.start_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.status"><code class="docutils literal notranslate"><span class="pre">TaskModel.status</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.task_id"><code class="docutils literal notranslate"><span class="pre">TaskModel.task_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.task_type"><code class="docutils literal notranslate"><span class="pre">TaskModel.task_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.user_id"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.user_info"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_info</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.user_validation"><code class="docutils literal notranslate"><span class="pre">TaskModel.user_validation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus"><code class="docutils literal notranslate"><span class="pre">TaskStatus</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.all"><code class="docutils literal notranslate"><span class="pre">TaskStatus.all</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.canceled"><code class="docutils literal notranslate"><span class="pre">TaskStatus.canceled</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.completed"><code class="docutils literal notranslate"><span class="pre">TaskStatus.completed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.failed"><code class="docutils literal notranslate"><span class="pre">TaskStatus.failed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.pause"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pause</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.pausing"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pausing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.pending"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pending</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.pending_validation"><code class="docutils literal notranslate"><span class="pre">TaskStatus.pending_validation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatus.running"><code class="docutils literal notranslate"><span class="pre">TaskStatus.running</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.all"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.all</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.canceled"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.canceled</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.completed"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.completed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.failed"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.failed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.pause"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pause</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.pausing"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pausing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.pending"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pending</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskStatusNotRunning.pending_validation"><code class="docutils literal notranslate"><span class="pre">TaskStatusNotRunning.pending_validation</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper"><code class="docutils literal notranslate"><span class="pre">ToolingHelper</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.add_keywords"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.add_keywords()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.check_keyword"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.check_keyword()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.extend_questions"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.extend_questions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.find_topic_by_name"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.find_topic_by_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.fix_apps"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.fix_apps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.sanitize_and_format_string"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_and_format_string()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.sanitize_and_format_topic_content"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_and_format_topic_content()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.sanitize_and_match"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_and_match()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.sanitize_str"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_str()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.sanitize_str_to_single_bracket"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanitize_str_to_single_bracket()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.sanity_check"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.sanity_check()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.unique_entries_list"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.unique_entries_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.validate_json_schema"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.validate_json_schema()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingHelper.validate_question_app"><code class="docutils literal notranslate"><span class="pre">ToolingHelper.validate_question_app()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingTemplate"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingTemplate.description"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingTemplate.keywords"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.keywords</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingTemplate.language"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.language</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingTemplate.masterprompt"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.masterprompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.ToolingTemplate.topics"><code class="docutils literal notranslate"><span class="pre">ToolingTemplate.topics</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.Topic"><code class="docutils literal notranslate"><span class="pre">Topic</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Topic.condensateprompt"><code class="docutils literal notranslate"><span class="pre">Topic.condensateprompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Topic.name"><code class="docutils literal notranslate"><span class="pre">Topic.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Topic.questions"><code class="docutils literal notranslate"><span class="pre">Topic.questions</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.User_info.channel"><code class="docutils literal notranslate"><span class="pre">User_info.channel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.User_info.department_id"><code class="docutils literal notranslate"><span class="pre">User_info.department_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.User_info.name"><code class="docutils literal notranslate"><span class="pre">User_info.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.User_info.query"><code class="docutils literal notranslate"><span class="pre">User_info.query</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.User_info.store_user_message"><code class="docutils literal notranslate"><span class="pre">User_info.store_user_message</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.User_info.toolname"><code class="docutils literal notranslate"><span class="pre">User_info.toolname</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.User_info.tools"><code class="docutils literal notranslate"><span class="pre">User_info.tools</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Lampi API’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lampiapi.html" class="btn btn-neutral float-right" title="lampiapi package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Lampi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

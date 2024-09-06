@@ -1,0 +1,7 @@
+lampiapi
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   lampiapi
