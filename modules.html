@@ -227,12 +227,15 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.get_tasks_with_user_validation"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_tasks_with_user_validation()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.pause_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.pause_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.queue_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.queue_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.remove_task_from_pending_queue"><code class="docutils literal notranslate"><span class="pre">TaskManager.remove_task_from_pending_queue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.requeue_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.requeue_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.resume_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.resume_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.start_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.start_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.update_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManager.update_tool_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_tool_task()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskManagerException"><code class="docutils literal notranslate"><span class="pre">TaskManagerException</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel"><code class="docutils literal notranslate"><span class="pre">TaskModel</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.Config"><code class="docutils literal notranslate"><span class="pre">TaskModel.Config</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.task_manager.TaskModel.data"><code class="docutils literal notranslate"><span class="pre">TaskModel.data</span></code></a></li>
@@ -337,6 +340,24 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.toolinghelper.Topic.questions"><code class="docutils literal notranslate"><span class="pre">Topic.questions</span></code></a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.tracer">lampiapi.tracer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.tracer.Tracer"><code class="docutils literal notranslate"><span class="pre">Tracer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.tracer.Tracer.langfuse"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.tracer.Tracer.user_id"><code class="docutils literal notranslate"><span class="pre">Tracer.user_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.tracer.Tracer.langfuse_instance"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse_instance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.tracer.Tracer.update_retriever_trace"><code class="docutils literal notranslate"><span class="pre">Tracer.update_retriever_trace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.tracer.Tracer.create_trace"><code class="docutils literal notranslate"><span class="pre">Tracer.create_trace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.tracer.Tracer.langfuse_trace_span"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse_trace_span()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#id0"><code class="docutils literal notranslate"><span class="pre">Tracer.create_trace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#id1"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse_instance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#id2"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse_trace_span()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#id3"><code class="docutils literal notranslate"><span class="pre">Tracer.update_retriever_trace()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.tracer.init_langfuse"><code class="docutils literal notranslate"><span class="pre">init_langfuse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.tracer.test_address"><code class="docutils literal notranslate"><span class="pre">test_address()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lampiapi.html#module-lampiapi.transcript_api">lampiapi.transcript_api module</a><ul>
@@ -490,12 +511,15 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.get_tasks_with_user_validation"><code class="docutils literal notranslate"><span class="pre">TaskManager.get_tasks_with_user_validation()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.pause_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.pause_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.queue_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.queue_task()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.remove_task_from_pending_queue"><code class="docutils literal notranslate"><span class="pre">TaskManager.remove_task_from_pending_queue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.requeue_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.requeue_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.resume_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.resume_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.start_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.start_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.update_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_task()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManager.update_tool_task"><code class="docutils literal notranslate"><span class="pre">TaskManager.update_tool_task()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.TaskManagerException"><code class="docutils literal notranslate"><span class="pre">TaskManagerException</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel"><code class="docutils literal notranslate"><span class="pre">TaskModel</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.Config"><code class="docutils literal notranslate"><span class="pre">TaskModel.Config</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.TaskModel.data"><code class="docutils literal notranslate"><span class="pre">TaskModel.data</span></code></a></li>
@@ -569,6 +593,19 @@
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Topic.condensateprompt"><code class="docutils literal notranslate"><span class="pre">Topic.condensateprompt</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Topic.name"><code class="docutils literal notranslate"><span class="pre">Topic.name</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Topic.questions"><code class="docutils literal notranslate"><span class="pre">Topic.questions</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.Tracer"><code class="docutils literal notranslate"><span class="pre">Tracer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Tracer.langfuse"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Tracer.user_id"><code class="docutils literal notranslate"><span class="pre">Tracer.user_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Tracer.langfuse_instance"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse_instance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Tracer.update_retriever_trace"><code class="docutils literal notranslate"><span class="pre">Tracer.update_retriever_trace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Tracer.create_trace"><code class="docutils literal notranslate"><span class="pre">Tracer.create_trace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#lampiapi.Tracer.langfuse_trace_span"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse_trace_span()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#id4"><code class="docutils literal notranslate"><span class="pre">Tracer.create_trace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#id5"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse_instance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#id6"><code class="docutils literal notranslate"><span class="pre">Tracer.langfuse_trace_span()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="lampiapi.html#id7"><code class="docutils literal notranslate"><span class="pre">Tracer.update_retriever_trace()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lampiapi.html#lampiapi.User_info"><code class="docutils literal notranslate"><span class="pre">User_info</span></code></a><ul>
