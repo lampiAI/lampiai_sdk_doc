@@ -60,6 +60,14 @@ lampiapi.toolinghelper module
    :undoc-members:
    :show-inheritance:
 
+lampiapi.tracer module
+----------------------
+
+.. automodule:: lampiapi.tracer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 lampiapi.transcript\_api module
 -------------------------------
 

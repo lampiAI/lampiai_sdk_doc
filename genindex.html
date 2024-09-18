@@ -219,10 +219,10 @@
         <li><a href="lampiapi.html#lampiapi.TaskStatusNotRunning.completed">(lampiapi.TaskStatusNotRunning attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="lampiapi.html#lampiapi.transcript_api.TranscriptAPI.compute_type">compute_type (lampiapi.transcript_api.TranscriptAPI attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="lampiapi.html#lampiapi.toolinghelper.Topic.condensateprompt">condensateprompt (lampiapi.toolinghelper.Topic attribute)</a>
 
       <ul>
@@ -287,6 +287,12 @@
 
       <ul>
         <li><a href="lampiapi.html#lampiapi.s3.S3.create_presigned_url">(lampiapi.s3.S3 method)</a>
+</li>
+      </ul></li>
+      <li><a href="lampiapi.html#id4">create_trace() (lampiapi.Tracer method)</a>, <a href="lampiapi.html#lampiapi.Tracer.create_trace">[1]</a>
+
+      <ul>
+        <li><a href="lampiapi.html#id0">(lampiapi.tracer.Tracer method)</a>, <a href="lampiapi.html#lampiapi.tracer.Tracer.create_trace">[1]</a>
 </li>
       </ul></li>
       <li><a href="lampiapi.html#lampiapi.lampiapi.LampiStatus.CREATE_VM">CREATE_VM (lampiapi.lampiapi.LampiStatus attribute)</a>
@@ -687,6 +693,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="lampiapi.html#lampiapi.tracer.init_langfuse">init_langfuse() (in module lampiapi.tracer)</a>
+</li>
       <li><a href="lampiapi.html#lampiapi.lampiapi.LampiStatus.INSTALL">INSTALL (lampiapi.lampiapi.LampiStatus attribute)</a>
 
       <ul>
@@ -811,8 +819,13 @@
         <li><a href="lampiapi.html#module-lampiapi.toolinghelper">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    lampiapi.tracer
+
+      <ul>
+        <li><a href="lampiapi.html#module-lampiapi.tracer">module</a>
+</li>
+      </ul></li>
       <li>
     lampiapi.transcript_api
 
@@ -820,10 +833,30 @@
         <li><a href="lampiapi.html#module-lampiapi.transcript_api">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="lampiapi.html#lampiapi.LampiStatus">LampiStatus (class in lampiapi)</a>
 
       <ul>
         <li><a href="lampiapi.html#lampiapi.lampiapi.LampiStatus">(class in lampiapi.lampiapi)</a>
+</li>
+      </ul></li>
+      <li><a href="lampiapi.html#lampiapi.Tracer.langfuse">langfuse (lampiapi.Tracer attribute)</a>
+
+      <ul>
+        <li><a href="lampiapi.html#lampiapi.tracer.Tracer.langfuse">(lampiapi.tracer.Tracer attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="lampiapi.html#id5">langfuse_instance() (lampiapi.Tracer method)</a>, <a href="lampiapi.html#lampiapi.Tracer.langfuse_instance">[1]</a>
+
+      <ul>
+        <li><a href="lampiapi.html#id1">(lampiapi.tracer.Tracer method)</a>, <a href="lampiapi.html#lampiapi.tracer.Tracer.langfuse_instance">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="lampiapi.html#id6">langfuse_trace_span() (lampiapi.Tracer method)</a>, <a href="lampiapi.html#lampiapi.Tracer.langfuse_trace_span">[1]</a>
+
+      <ul>
+        <li><a href="lampiapi.html#id2">(lampiapi.tracer.Tracer method)</a>, <a href="lampiapi.html#lampiapi.tracer.Tracer.langfuse_trace_span">[1]</a>
 </li>
       </ul></li>
       <li><a href="lampiapi.html#lampiapi.toolinghelper.ToolingTemplate.language">language (lampiapi.toolinghelper.ToolingTemplate attribute)</a>
@@ -899,6 +932,8 @@
         <li><a href="lampiapi.html#module-lampiapi.task_manager">lampiapi.task_manager</a>
 </li>
         <li><a href="lampiapi.html#module-lampiapi.toolinghelper">lampiapi.toolinghelper</a>
+</li>
+        <li><a href="lampiapi.html#module-lampiapi.tracer">lampiapi.tracer</a>
 </li>
         <li><a href="lampiapi.html#module-lampiapi.transcript_api">lampiapi.transcript_api</a>
 </li>
@@ -1081,10 +1116,22 @@
         <li><a href="lampiapi.html#lampiapi.remote_ssh.RemoteSSHClient">(class in lampiapi.remote_ssh)</a>
 </li>
       </ul></li>
+      <li><a href="lampiapi.html#lampiapi.task_manager.TaskManager.remove_task_from_pending_queue">remove_task_from_pending_queue() (lampiapi.task_manager.TaskManager method)</a>
+
+      <ul>
+        <li><a href="lampiapi.html#lampiapi.TaskManager.remove_task_from_pending_queue">(lampiapi.TaskManager method)</a>
+</li>
+      </ul></li>
       <li><a href="lampiapi.html#lampiapi.S3.rename_file">rename_file() (lampiapi.S3 method)</a>
 
       <ul>
         <li><a href="lampiapi.html#lampiapi.s3.S3.rename_file">(lampiapi.s3.S3 method)</a>
+</li>
+      </ul></li>
+      <li><a href="lampiapi.html#lampiapi.task_manager.TaskManager.requeue_task">requeue_task() (lampiapi.task_manager.TaskManager method)</a>
+
+      <ul>
+        <li><a href="lampiapi.html#lampiapi.TaskManager.requeue_task">(lampiapi.TaskManager method)</a>
 </li>
       </ul></li>
       <li><a href="lampiapi.html#lampiapi.lampiapi.LampiStatus.RESERVE_S3">RESERVE_S3 (lampiapi.lampiapi.LampiStatus attribute)</a>
@@ -1093,14 +1140,14 @@
         <li><a href="lampiapi.html#lampiapi.LampiStatus.RESERVE_S3">(lampiapi.LampiStatus attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="lampiapi.html#lampiapi.task_manager.TaskModel.result">result (lampiapi.task_manager.TaskModel attribute)</a>
 
       <ul>
         <li><a href="lampiapi.html#lampiapi.TaskModel.result">(lampiapi.TaskModel attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="lampiapi.html#lampiapi.task_manager.TaskManager.resume_task">resume_task() (lampiapi.task_manager.TaskManager method)</a>
 
       <ul>
@@ -1303,6 +1350,8 @@
         <li><a href="lampiapi.html#lampiapi.task_manager.TaskManager">(class in lampiapi.task_manager)</a>
 </li>
       </ul></li>
+      <li><a href="lampiapi.html#lampiapi.TaskManagerException">TaskManagerException</a>, <a href="lampiapi.html#lampiapi.task_manager.TaskManagerException">[1]</a>
+</li>
       <li><a href="lampiapi.html#lampiapi.TaskModel">TaskModel (class in lampiapi)</a>
 
       <ul>
@@ -1328,6 +1377,8 @@
 </li>
       </ul></li>
       <li><a href="lampiapi.html#lampiapi.toolinghelper.Template">Template (class in lampiapi.toolinghelper)</a>
+</li>
+      <li><a href="lampiapi.html#lampiapi.tracer.test_address">test_address() (in module lampiapi.tracer)</a>
 </li>
       <li><a href="lampiapi.html#lampiapi.ToolingHelper">ToolingHelper (class in lampiapi)</a>
 
@@ -1365,6 +1416,12 @@
 
       <ul>
         <li><a href="lampiapi.html#lampiapi.ToolingTemplate.topics">(lampiapi.ToolingTemplate attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="lampiapi.html#lampiapi.Tracer">Tracer (class in lampiapi)</a>
+
+      <ul>
+        <li><a href="lampiapi.html#lampiapi.tracer.Tracer">(class in lampiapi.tracer)</a>
 </li>
       </ul></li>
       <li><a href="lampiapi.html#lampiapi.lampiapi.LampiStatus.TRAINED">TRAINED (lampiapi.lampiapi.LampiStatus attribute)</a>
@@ -1443,6 +1500,12 @@
         <li><a href="lampiapi.html#lampiapi.lampiapi.LampiAPI.update_document_summary">(lampiapi.lampiapi.LampiAPI method)</a>
 </li>
       </ul></li>
+      <li><a href="lampiapi.html#id7">update_retriever_trace() (lampiapi.Tracer method)</a>, <a href="lampiapi.html#lampiapi.Tracer.update_retriever_trace">[1]</a>
+
+      <ul>
+        <li><a href="lampiapi.html#id3">(lampiapi.tracer.Tracer method)</a>, <a href="lampiapi.html#lampiapi.tracer.Tracer.update_retriever_trace">[1]</a>
+</li>
+      </ul></li>
       <li><a href="lampiapi.html#lampiapi.LampiAPI.update_status_by_id">update_status_by_id() (lampiapi.LampiAPI method)</a>
 
       <ul>
@@ -1479,6 +1542,10 @@
 
       <ul>
         <li><a href="lampiapi.html#lampiapi.TaskModel.user_id">(lampiapi.TaskModel attribute)</a>
+</li>
+        <li><a href="lampiapi.html#lampiapi.Tracer.user_id">(lampiapi.Tracer attribute)</a>
+</li>
+        <li><a href="lampiapi.html#lampiapi.tracer.Tracer.user_id">(lampiapi.tracer.Tracer attribute)</a>
 </li>
       </ul></li>
       <li><a href="lampiapi.html#lampiapi.User_info">User_info (class in lampiapi)</a>
