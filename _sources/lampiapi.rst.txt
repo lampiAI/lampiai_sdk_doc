@@ -12,6 +12,14 @@ lampiapi.lampiapi module
    :undoc-members:
    :show-inheritance:
 
+lampiapi.lampischemas module
+----------------------------
+
+.. automodule:: lampiapi.lampischemas
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 lampiapi.mylogger module
 ------------------------
 
